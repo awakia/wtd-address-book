@@ -32,9 +32,6 @@
 {
     [super loadView];
 
-    // ナビゲーションバー
-    [self.navigationController.navigationBar setHidden:YES];
-
     // スクロールビュー
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * kTutorialPageCount, self.scrollView.frame.size.height)];
     [self.pageControl setNumberOfPages:kTutorialPageCount];
@@ -54,7 +51,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -87,6 +83,10 @@
 #pragma mark - event listener
 - (IBAction)touchedUpInsideWithCompleteButton:(UIButton *)completeButton
 {
+    // チュートリアル終了
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationTutorialDidFinished
+                                                        object:self
+                                                      userInfo:nil];
 }
 
 

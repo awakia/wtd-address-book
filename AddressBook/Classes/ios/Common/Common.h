@@ -26,12 +26,19 @@
 
 #pragma mark - Storyboard
 
+/// チュートリアル
 #define kTutorialStoryboard                          @"TutorialStoryboard"
+/// RootView
+#define kRootViewStoryboard                          @"RootViewStoryboard"
 
 
 #pragma mark - NSUserDefaults
 
+/// ユーザーエージェント
 #define kUserDefaultsKeyForUserAgent                @"UserAgent"
 
 
 #pragma mark - NSNotification
+
+/// チュートリアル終了通知
+#define kNotificationTutorialDidFinished            @"NotificationTutorialDidFinished"

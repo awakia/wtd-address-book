@@ -2,11 +2,11 @@
 //  Copyright (c) Kenzan Hase. All rights reserved.
 
 
-#import "WelcomeViewController.h"
+#import "RootViewController.h"
 
 
 #pragma mark - implementation
-@implementation WelcomeViewController
+@implementation RootViewController
 
 
 #pragma mark - initializer
@@ -23,7 +23,6 @@
 - (void)loadView
 {
     [super loadView];
-    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)viewDidLoad
@@ -49,25 +48,6 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-}
-
-
-#pragma mark - event listener
-- (IBAction)touchedUpInsideWithLoginButton:(UIButton *)loginButton
-{
-/*
-    LoginViewController *vc = [[LoginViewController alloc] initWithNibName:NSStringFromClass([LoginViewController class])
-                                                                    bundle:nil];
-    [vc showInView:self.view
-        loginIsSucceededBlock:^ () {
-    }
-           loginIsFailedBlock:^ () {}
-         loginIsCanceledBlock:^ () {}];
-*/
-}
-
-- (IBAction)touchedUpInsideWithPushViewControllerButton:(UIButton *)pushViewControllerButton
-{
 }
 
 

@@ -11,6 +11,8 @@
 		E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18C1736D896005B0438 /* SyncContactViewController.m */; };
 		E692F1901736E402005B0438 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18F1736E402005B0438 /* TutorialViewController.m */; };
 		E692F1921736E66B005B0438 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E692F1911736E66B005B0438 /* QuartzCore.framework */; };
+		E692F1941736F344005B0438 /* RootViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E692F1931736F344005B0438 /* RootViewStoryboard.storyboard */; };
+		E692F19C1736F66B005B0438 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F1991736F66B005B0438 /* RootViewController.m */; };
 		E6D0DD86173693D700F3E399 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD85173693D700F3E399 /* UIKit.framework */; };
 		E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD87173693D700F3E399 /* Foundation.framework */; };
 		E6D0DD8A173693D700F3E399 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD89173693D700F3E399 /* CoreGraphics.framework */; };
@@ -62,6 +64,9 @@
 		E692F18E1736E402005B0438 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		E692F18F1736E402005B0438 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		E692F1911736E66B005B0438 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E692F1931736F344005B0438 /* RootViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RootViewStoryboard.storyboard; sourceTree = "<group>"; };
+		E692F1981736F66B005B0438 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E692F1991736F66B005B0438 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E6D0DD82173693D700F3E399 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D0DD85173693D700F3E399 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6D0DD87173693D700F3E399 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +150,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		E692F1951736F66A005B0438 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				E692F1981736F66B005B0438 /* RootViewController.h */,
+				E692F1991736F66B005B0438 /* RootViewController.m */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
 		E6D0DD79173693D700F3E399 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +235,7 @@
 				E6D0DDC51736951A00F3E399 /* AppDelegate.m */,
 				E6D0DDDB1736993400F3E399 /* Common */,
 				E6D0DE131736CD3300F3E399 /* Tutorial */,
+				E692F1951736F66A005B0438 /* RootView */,
 				E6D0DDC61736951A00F3E399 /* main.m */,
 			);
 			path = ios;
@@ -299,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				E6D0DDD31736951A00F3E399 /* TutorialStoryboard.storyboard */,
+				E692F1931736F344005B0438 /* RootViewStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -521,6 +537,7 @@
 				E6D0DE111736C40100F3E399 /* tutorial_button_close_touched.png in Resources */,
 				E6D0DE121736C40100F3E399 /* tutorial_button_close.png in Resources */,
 				E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */,
+				E692F1941736F344005B0438 /* RootViewStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +586,7 @@
 				E6D0DE241736CD3400F3E399 /* WelcomeViewController.m in Sources */,
 				E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */,
 				E692F1901736E402005B0438 /* TutorialViewController.m in Sources */,
+				E692F19C1736F66B005B0438 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

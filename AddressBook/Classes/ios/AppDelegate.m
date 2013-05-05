@@ -5,8 +5,8 @@
 
 
 #import "AppDelegate.h"
-// アプリ開始時、チュートリアル画面
-#import "TutorialNavigationController.h"
+#import "TutorialNavigationController.h"    // アプリ開始時、チュートリアル画面
+#import "RootViewController.h"              // アプリのルートUI
 
 
 #pragma mark - implementation
@@ -18,13 +18,17 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     BOOL isTutorial = YES;
-    UIViewController *vc = nil;
-        // アプリ開始チュートリアル
-    if (isTutorial) { vc = [[TutorialNavigationController alloc] init]; }
-    else { }
+    // アプリ開始チュートリアル or 通常
+    UIViewController *vc = (isTutorial) ? [[TutorialNavigationController alloc] init] : [[RootViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     [self.window setRootViewController:vc];
+
+    // チュートリアル終了通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tutorialDidFinishedWithNotification:)
+                                                 name:kNotificationTutorialDidFinished
+                                               object:nil];
 
     return YES;
 }
@@ -47,6 +51,17 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+}
+
+
+#pragma mark - Notification
+/**
+ * チュートリアルが終了した
+ * @param notification notification
+ */
+- (void)tutorialDidFinishedWithNotification:(NSNotification *)notification
+{
+    [self.window setRootViewController:[[RootViewController alloc] init]];
 }
 
 

@@ -9,6 +9,9 @@
 
 
 #pragma mark - property
+/// ナビゲーションバーの代わり
+@property (nonatomic, weak) IBOutlet UIView *navigationBarView;
+
 /// 連絡先を同期したいサービスごとに横に並べる
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 

@@ -3,7 +3,7 @@
 
 
 #import "SyncContactViewController.h"
-#import "UINavigationBar+Custom.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 #pragma mark - implementation
@@ -11,6 +11,8 @@
 
 
 #pragma mark - synthesize
+@synthesize navigationBarView;
+
 @synthesize scrollView;
 
 @synthesize syncGmailButton;
@@ -34,9 +36,11 @@
 {
     [super loadView];
 
-    // ナビゲーションバー
-    [self.navigationController.navigationBar setNavigationBarShadow];
-    self.navigationItem.hidesBackButton = YES;
+    // ナビゲーションバー代わり
+    self.navigationBarView.layer.shadowOffset = kNavigationBarShadowOffset;
+    self.navigationBarView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.navigationBarView.layer.shadowOpacity = kNavigationBarShadowOpacity;
+    self.navigationBarView.layer.shadowPath = [[UIBezierPath bezierPathWithRect:self.navigationBarView.bounds] CGPath];
 
     // スクロールビュー
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width * kSyncContactCount, self.view.frame.size.height - kNavigationBarDefaultHeight)];
@@ -50,7 +54,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -61,7 +64,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
