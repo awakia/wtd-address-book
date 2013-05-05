@@ -4,6 +4,11 @@
 
 #pragma mark - constant
 
+#pragma mark - 設定
+
+/// 連絡先を同期する数(Gmail, Facebook)
+#define kSyncContactCount 2
+
 
 #pragma mark - デザイン
 
@@ -30,4 +35,3 @@
 
 
 #pragma mark - NSNotification
-

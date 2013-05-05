@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E692F1891736D2EC005B0438 /* LoginViewController.xib */; };
+		E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18C1736D896005B0438 /* SyncContactViewController.m */; };
 		E6D0DD86173693D700F3E399 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD85173693D700F3E399 /* UIKit.framework */; };
 		E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD87173693D700F3E399 /* Foundation.framework */; };
 		E6D0DD8A173693D700F3E399 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD89173693D700F3E399 /* CoreGraphics.framework */; };
@@ -54,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		E692F1891736D2EC005B0438 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E692F18B1736D896005B0438 /* SyncContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncContactViewController.h; sourceTree = "<group>"; };
+		E692F18C1736D896005B0438 /* SyncContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncContactViewController.m; sourceTree = "<group>"; };
 		E6D0DD82173693D700F3E399 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D0DD85173693D700F3E399 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6D0DD87173693D700F3E399 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -393,9 +396,9 @@
 			children = (
 				E6D0DE181736CD3400F3E399 /* TutorialNavigationController.h */,
 				E6D0DE191736CD3400F3E399 /* TutorialNavigationController.m */,
+				E6D0DE1A1736CD3400F3E399 /* Welcome */,
 				E6D0DE161736CD3400F3E399 /* SyncContact */,
 				E6D0DE171736CD3400F3E399 /* Tutorial */,
-				E6D0DE1A1736CD3400F3E399 /* Welcome */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -403,6 +406,8 @@
 		E6D0DE161736CD3400F3E399 /* SyncContact */ = {
 			isa = PBXGroup;
 			children = (
+				E692F18B1736D896005B0438 /* SyncContactViewController.h */,
+				E692F18C1736D896005B0438 /* SyncContactViewController.m */,
 			);
 			path = SyncContact;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				E6D0DDFF17369D0600F3E399 /* UINavigationItem+Custom.m in Sources */,
 				E6D0DE211736CD3400F3E399 /* TutorialNavigationController.m in Sources */,
 				E6D0DE241736CD3400F3E399 /* WelcomeViewController.m in Sources */,
+				E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

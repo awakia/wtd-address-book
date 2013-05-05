@@ -34,6 +34,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="touchedUpInsideWithPushViewControllerButton:" destination="2" eventType="touchUpInside" id="2a3-3A-B2Y"/>
                                     <segue destination="K9h-A7-rmK" kind="push" id="6L5-L3-B0F"/>
                                 </connections>
                             </button>
@@ -59,6 +60,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.03591229839" green="0.16494455650000001" blue="0.49558971769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchedUpInsideWithLoginButton:" destination="2" eventType="touchUpInside" id="u0x-9S-Uo9"/>
+                                    <segue destination="K9h-A7-rmK" kind="push" id="VBl-Qv-ksE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -86,13 +91,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="JoG-4Q-rZA">
-                                                <rect key="frame" x="40" y="40" width="240" height="180"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="40" y="32" width="240" height="180"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gmailの連絡先を同期しよう" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IDA-OV-lLy">
-                                                <rect key="frame" x="40" y="237" width="240" height="23"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="40" y="229" width="240" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                                 <color key="textColor" white="0.20262096769999999" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="0.2026209677419355" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,8 +105,8 @@
                                                 <size key="shadowOffset" width="1" height="0.0"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="同期するとあんな良い事があるんだぜー。同期するとあんな良い事があるんだぜー。" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xD8-72-Ctr">
-                                                <rect key="frame" x="40" y="258" width="240" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="40" y="248" width="240" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="11"/>
                                                 <color key="textColor" white="0.35077494959677419" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="0.3507749496" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,8 +114,8 @@
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tDf-6V-xUK">
-                                                <rect key="frame" x="8" y="348" width="304" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="8" y="378" width="304" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
                                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -130,10 +135,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.26864919349999999" blue="0.083165322580000006" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchedUpInsideWithButton:" destination="K9h-A7-rmK" eventType="touchUpInside" id="AsO-h1-dE6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NYW-An-YEG">
-                                                <rect key="frame" x="49" y="417" width="222" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="49" y="440" width="222" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="スキップする" backgroundImage="tutorial_button_cancel_import.png">
@@ -152,6 +160,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchedUpInsideWithButton:" destination="K9h-A7-rmK" eventType="touchUpInside" id="8ps-FZ-rk2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -161,13 +172,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="ITz-P4-wOZ">
-                                                <rect key="frame" x="40" y="40" width="240" height="180"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="40" y="32" width="240" height="180"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebookの連絡先を同期しよう" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bts-GD-jKa">
-                                                <rect key="frame" x="40" y="240" width="240" height="23"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="40" y="229" width="240" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                                 <color key="textColor" white="0.20262096769999999" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="0.20262096769999999" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,8 +186,8 @@
                                                 <size key="shadowOffset" width="1" height="0.0"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="同期するとあんな良い事があるんだぜー。同期するとあんな良い事があるんだぜー。" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAm-Gy-mbI">
-                                                <rect key="frame" x="40" y="258" width="240" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="40" y="248" width="240" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="11"/>
                                                 <color key="textColor" white="0.3507749496" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="0.3507749496" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,8 +195,8 @@
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k3r-N8-mjI">
-                                                <rect key="frame" x="8" y="348" width="304" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="8" y="378" width="304" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="16"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
                                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -205,10 +216,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.03591229839" green="0.16494455650000001" blue="0.49558971769999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchedUpInsideWithButton:" destination="K9h-A7-rmK" eventType="touchUpInside" id="eDP-3C-huE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f4K-IF-MPf">
-                                                <rect key="frame" x="49" y="417" width="222" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <rect key="frame" x="49" y="440" width="222" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="12"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="スキップする" backgroundImage="tutorial_button_cancel_import.png">
@@ -228,6 +242,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="touchedUpInsideWithButton:" destination="K9h-A7-rmK" eventType="touchUpInside" id="8Oa-5F-Xvt"/>
                                                     <segue destination="v12-o5-JNJ" kind="push" id="b2o-tu-IgI"/>
                                                 </connections>
                                             </button>
@@ -242,6 +257,13 @@
                     <navigationItem key="navigationItem" id="xyY-sx-PEe"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="scrollView" destination="maw-7c-xA6" id="SxA-qC-a3p"/>
+                        <outlet property="skipSyncFacebookButton" destination="f4K-IF-MPf" id="avE-Ag-dbf"/>
+                        <outlet property="skipSyncGmailButton" destination="NYW-An-YEG" id="o1R-8Z-XNE"/>
+                        <outlet property="syncFacebookButton" destination="k3r-N8-mjI" id="CKx-LS-pOG"/>
+                        <outlet property="syncGmailButton" destination="tDf-6V-xUK" id="0Ow-Vt-XZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOC-FK-mgc" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,6 +460,17 @@
         <image name="tutorial_button_gmail_touched.png" width="608" height="88"/>
     </resources>
     <classes>
+        <class className="SyncContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SyncContactViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="touchedUpInsideWithButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="skipSyncFacebookButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="skipSyncGmailButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="syncFacebookButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="syncGmailButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
         <class className="WelcomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeViewController.h"/>
             <relationships>
@@ -451,4 +484,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="6L5-L3-B0F"/>
+    </inferredMetricsTieBreakers>
 </document>
