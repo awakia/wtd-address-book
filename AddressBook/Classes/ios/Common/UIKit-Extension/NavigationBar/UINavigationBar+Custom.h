@@ -13,5 +13,10 @@
  */
 //- (void)designWantedlyDefaultNavigationBar;
 
+/**
+ * ナビゲーションバーの下の影を付ける
+ */
+- (void)setNavigationBarShadow;
+
 
 @end

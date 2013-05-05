@@ -34,6 +34,14 @@
     [self setNavigationBarShadow];
 }
 */
+- (void)setNavigationBarShadow
+{
+    // シャドー
+    self.layer.shadowOffset = kNavigationBarShadowOffset;
+    self.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.layer.shadowOpacity = kNavigationBarShadowOpacity;
+    self.layer.shadowPath = [[UIBezierPath bezierPathWithRect:self.bounds] CGPath];
+}
 
 
 #pragma mark - private api
@@ -76,19 +84,6 @@
 
         [self addSubview:btn];
     }
-}
-*/
-/**
- * ナビゲーションバーの下の影を付ける
- */
-/*
-- (void)setNavigationBarShadow
-{
-    // シャドー
-    self.layer.shadowOffset = kNavigationBarShadowOffset;
-    self.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.layer.shadowOpacity = kNavigationBarShadowOpacity;
-    self.layer.shadowPath = [[UIBezierPath bezierPathWithRect:self.bounds] CGPath];
 }
 */
 

@@ -3,6 +3,7 @@
 
 
 #import "SyncContactViewController.h"
+#import "UINavigationBar+Custom.h"
 
 
 #pragma mark - implementation
@@ -33,7 +34,11 @@
 {
     [super loadView];
 
-    //
+    // ナビゲーションバー
+    [self.navigationController.navigationBar setNavigationBarShadow];
+    self.navigationItem.hidesBackButton = YES;
+
+    // スクロールビュー
     [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width * kSyncContactCount, self.view.frame.size.height - kNavigationBarDefaultHeight)];
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E692F1891736D2EC005B0438 /* LoginViewController.xib */; };
 		E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18C1736D896005B0438 /* SyncContactViewController.m */; };
+		E692F1901736E402005B0438 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18F1736E402005B0438 /* TutorialViewController.m */; };
+		E692F1921736E66B005B0438 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E692F1911736E66B005B0438 /* QuartzCore.framework */; };
 		E6D0DD86173693D700F3E399 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD85173693D700F3E399 /* UIKit.framework */; };
 		E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD87173693D700F3E399 /* Foundation.framework */; };
 		E6D0DD8A173693D700F3E399 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD89173693D700F3E399 /* CoreGraphics.framework */; };
@@ -57,6 +59,9 @@
 		E692F1891736D2EC005B0438 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E692F18B1736D896005B0438 /* SyncContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncContactViewController.h; sourceTree = "<group>"; };
 		E692F18C1736D896005B0438 /* SyncContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncContactViewController.m; sourceTree = "<group>"; };
+		E692F18E1736E402005B0438 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		E692F18F1736E402005B0438 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		E692F1911736E66B005B0438 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E6D0DD82173693D700F3E399 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D0DD85173693D700F3E399 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6D0DD87173693D700F3E399 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E692F1921736E66B005B0438 /* QuartzCore.framework in Frameworks */,
 				E6D0DD86173693D700F3E399 /* UIKit.framework in Frameworks */,
 				E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */,
 				E6D0DD8A173693D700F3E399 /* CoreGraphics.framework in Frameworks */,
@@ -161,6 +167,7 @@
 		E6D0DD84173693D700F3E399 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E692F1911736E66B005B0438 /* QuartzCore.framework */,
 				E6D0DD85173693D700F3E399 /* UIKit.framework */,
 				E6D0DD87173693D700F3E399 /* Foundation.framework */,
 				E6D0DD89173693D700F3E399 /* CoreGraphics.framework */,
@@ -415,6 +422,8 @@
 		E6D0DE171736CD3400F3E399 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E692F18E1736E402005B0438 /* TutorialViewController.h */,
+				E692F18F1736E402005B0438 /* TutorialViewController.m */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 				E6D0DE211736CD3400F3E399 /* TutorialNavigationController.m in Sources */,
 				E6D0DE241736CD3400F3E399 /* WelcomeViewController.m in Sources */,
 				E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */,
+				E692F1901736E402005B0438 /* TutorialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

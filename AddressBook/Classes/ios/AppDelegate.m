@@ -17,10 +17,10 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // UI設定
     BOOL isTutorial = YES;
     UIViewController *vc = nil;
-    if (isTutorial) { vc = [[TutorialNavigationController alloc] init]; }// アプリ開始チュートリアル
+        // アプリ開始チュートリアル
+    if (isTutorial) { vc = [[TutorialNavigationController alloc] init]; }
     else { }
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
