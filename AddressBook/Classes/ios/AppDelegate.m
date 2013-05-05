@@ -5,6 +5,8 @@
 
 
 #import "AppDelegate.h"
+// アプリ開始時、チュートリアル画面
+#import "TutorialNavigationController.h"
 
 
 #pragma mark - implementation
@@ -17,15 +19,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // UI設定
     BOOL isTutorial = YES;
-    UIViewController *rootVc = nil;
-        // アプリ開始チュートリアル
-    if (isTutorial) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kTutorialStoryboard
-                                                             bundle:nil];
-        rootVc = [storyboard instantiateInitialViewController];
-    }
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:rootVc];
-    [self.window setRootViewController:nvc];
+    UIViewController *vc = nil;
+    if (isTutorial) { vc = [[TutorialNavigationController alloc] init]; }// アプリ開始チュートリアル
+    else { }
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    [self.window setRootViewController:vc];
 
     return YES;
 }

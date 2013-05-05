@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E692F1891736D2EC005B0438 /* LoginViewController.xib */; };
 		E6D0DD86173693D700F3E399 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD85173693D700F3E399 /* UIKit.framework */; };
 		E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD87173693D700F3E399 /* Foundation.framework */; };
 		E6D0DD8A173693D700F3E399 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D0DD89173693D700F3E399 /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 		E6D0DE0E1736B63300F3E399 /* tutorial_button_gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D0DE0C1736B63300F3E399 /* tutorial_button_gmail.png */; };
 		E6D0DE111736C40100F3E399 /* tutorial_button_close_touched.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D0DE0F1736C40000F3E399 /* tutorial_button_close_touched.png */; };
 		E6D0DE121736C40100F3E399 /* tutorial_button_close.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D0DE101736C40000F3E399 /* tutorial_button_close.png */; };
+		E6D0DE211736CD3400F3E399 /* TutorialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D0DE191736CD3400F3E399 /* TutorialNavigationController.m */; };
+		E6D0DE241736CD3400F3E399 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D0DE1E1736CD3400F3E399 /* WelcomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E692F1891736D2EC005B0438 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E6D0DD82173693D700F3E399 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D0DD85173693D700F3E399 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6D0DD87173693D700F3E399 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +98,10 @@
 		E6D0DE0C1736B63300F3E399 /* tutorial_button_gmail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_button_gmail.png; sourceTree = "<group>"; };
 		E6D0DE0F1736C40000F3E399 /* tutorial_button_close_touched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_button_close_touched.png; sourceTree = "<group>"; };
 		E6D0DE101736C40000F3E399 /* tutorial_button_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial_button_close.png; sourceTree = "<group>"; };
+		E6D0DE181736CD3400F3E399 /* TutorialNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialNavigationController.h; sourceTree = "<group>"; };
+		E6D0DE191736CD3400F3E399 /* TutorialNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialNavigationController.m; sourceTree = "<group>"; };
+		E6D0DE1D1736CD3400F3E399 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		E6D0DE1E1736CD3400F3E399 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E692F1881736D2EC005B0438 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E692F1891736D2EC005B0438 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		E6D0DD79173693D700F3E399 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,7 @@
 				E6D0DDC41736951A00F3E399 /* AppDelegate.h */,
 				E6D0DDC51736951A00F3E399 /* AppDelegate.m */,
 				E6D0DDDB1736993400F3E399 /* Common */,
+				E6D0DE131736CD3300F3E399 /* Tutorial */,
 				E6D0DDC61736951A00F3E399 /* main.m */,
 			);
 			path = ios;
@@ -256,6 +273,7 @@
 		E6D0DDD01736951A00F3E399 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				E692F1881736D2EC005B0438 /* Login */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -370,6 +388,41 @@
 			path = Illegal;
 			sourceTree = "<group>";
 		};
+		E6D0DE131736CD3300F3E399 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				E6D0DE181736CD3400F3E399 /* TutorialNavigationController.h */,
+				E6D0DE191736CD3400F3E399 /* TutorialNavigationController.m */,
+				E6D0DE161736CD3400F3E399 /* SyncContact */,
+				E6D0DE171736CD3400F3E399 /* Tutorial */,
+				E6D0DE1A1736CD3400F3E399 /* Welcome */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		E6D0DE161736CD3400F3E399 /* SyncContact */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SyncContact;
+			sourceTree = "<group>";
+		};
+		E6D0DE171736CD3400F3E399 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		E6D0DE1A1736CD3400F3E399 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E6D0DE1D1736CD3400F3E399 /* WelcomeViewController.h */,
+				E6D0DE1E1736CD3400F3E399 /* WelcomeViewController.m */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,6 +506,7 @@
 				E6D0DE0E1736B63300F3E399 /* tutorial_button_gmail.png in Resources */,
 				E6D0DE111736C40100F3E399 /* tutorial_button_close_touched.png in Resources */,
 				E6D0DE121736C40100F3E399 /* tutorial_button_close.png in Resources */,
+				E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +551,8 @@
 				E6D0DDF91736993400F3E399 /* UIColor+Hexadecimal.m in Sources */,
 				E6D0DDFE17369D0600F3E399 /* UINavigationBar+Custom.m in Sources */,
 				E6D0DDFF17369D0600F3E399 /* UINavigationItem+Custom.m in Sources */,
+				E6D0DE211736CD3400F3E399 /* TutorialNavigationController.m in Sources */,
+				E6D0DE241736CD3400F3E399 /* WelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
