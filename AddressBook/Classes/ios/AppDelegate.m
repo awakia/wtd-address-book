@@ -15,6 +15,18 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // UI設定
+    BOOL isTutorial = YES;
+    UIViewController *rootVc = nil;
+        // アプリ開始チュートリアル
+    if (isTutorial) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kTutorialStoryboard
+                                                             bundle:nil];
+        rootVc = [storyboard instantiateInitialViewController];
+    }
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:rootVc];
+    [self.window setRootViewController:nvc];
+
     return YES;
 }
 
