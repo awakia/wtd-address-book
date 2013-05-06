@@ -61,7 +61,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
  */
 - (void)tutorialDidFinishedWithNotification:(NSNotification *)notification
 {
-    [self.window setRootViewController:[[RootViewController alloc] init]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kRootViewStoryboard
+                                                         bundle:nil];
+    UIViewController *vc = [storyboard instantiateInitialViewController];
+    [self.window setRootViewController:vc];
 }
 
 

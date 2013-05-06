@@ -477,36 +477,6 @@
         <image name="tutorial_button_gmail.png" width="608" height="88"/>
         <image name="tutorial_button_gmail_touched.png" width="608" height="88"/>
     </resources>
-    <classes>
-        <class className="SyncContactViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SyncContactViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="touchedUpInsideWithButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="navigationBarView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="skipSyncFacebookButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="skipSyncGmailButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="syncFacebookButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="syncGmailButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="TutorialViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TutorialViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="touchedUpInsideWithCompleteButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="completeButtonBackgroundView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="WelcomeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WelcomeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="touchedUpInsideWithLoginButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="touchedUpInsideWithPushViewControllerButton:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

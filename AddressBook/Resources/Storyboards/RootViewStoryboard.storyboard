@@ -47,6 +47,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="09z-7E-8dy"/>
+                    <connections>
+                        <outlet property="tableView" destination="TBt-zp-BpG" id="tup-e2-kIu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeV-9k-MMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,8 +76,20 @@
         </scene>
     </scenes>
     <classes>
+        <class className="FriendListViewController" superclassName="TableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FriendListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="RootViewController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+        </class>
+        <class className="TableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
