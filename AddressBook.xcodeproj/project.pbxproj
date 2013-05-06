@@ -33,6 +33,10 @@
 		E690AF0217377EE2005D20B8 /* OAuthXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEE817377EE2005D20B8 /* OAuthXRequest.m */; };
 		E690AF0317377EE2005D20B8 /* OAuthXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEEA17377EE2005D20B8 /* OAuthXResponse.m */; };
 		E690AF0417377EE2005D20B8 /* OAuthXToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEED17377EE2005D20B8 /* OAuthXToken.m */; };
+		E690AF0717378213005D20B8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E690AF0517378212005D20B8 /* AddressBook.framework */; };
+		E690AF0817378213005D20B8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E690AF0617378212005D20B8 /* AddressBookUI.framework */; };
+		E690AF0A1737821C005D20B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E690AF091737821B005D20B8 /* CoreData.framework */; };
+		E690AF0E17378496005D20B8 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E690AF0C17378496005D20B8 /* Contacts.xcdatamodeld */; };
 		E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E692F1891736D2EC005B0438 /* LoginViewController.xib */; };
 		E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18C1736D896005B0438 /* SyncContactViewController.m */; };
 		E692F1901736E402005B0438 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18F1736E402005B0438 /* TutorialViewController.m */; };
@@ -138,6 +142,10 @@
 		E690AEEB17377EE2005D20B8 /* OAuthXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthXSDK.h; sourceTree = "<group>"; };
 		E690AEEC17377EE2005D20B8 /* OAuthXToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthXToken.h; sourceTree = "<group>"; };
 		E690AEED17377EE2005D20B8 /* OAuthXToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthXToken.m; sourceTree = "<group>"; };
+		E690AF0517378212005D20B8 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		E690AF0617378212005D20B8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		E690AF091737821B005D20B8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E690AF0D17378496005D20B8 /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
 		E692F1891736D2EC005B0438 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E692F18B1736D896005B0438 /* SyncContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncContactViewController.h; sourceTree = "<group>"; };
 		E692F18C1736D896005B0438 /* SyncContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncContactViewController.m; sourceTree = "<group>"; };
@@ -202,6 +210,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E690AF0A1737821C005D20B8 /* CoreData.framework in Frameworks */,
+				E690AF0717378213005D20B8 /* AddressBook.framework in Frameworks */,
+				E690AF0817378213005D20B8 /* AddressBookUI.framework in Frameworks */,
 				E692F1921736E66B005B0438 /* QuartzCore.framework in Frameworks */,
 				E6D0DD86173693D700F3E399 /* UIKit.framework in Frameworks */,
 				E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */,
@@ -319,6 +330,14 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		E690AF0B17378496005D20B8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E690AF0C17378496005D20B8 /* Contacts.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		E692F1881736D2EC005B0438 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +380,9 @@
 		E6D0DD84173693D700F3E399 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E690AF091737821B005D20B8 /* CoreData.framework */,
+				E690AF0517378212005D20B8 /* AddressBook.framework */,
+				E690AF0617378212005D20B8 /* AddressBookUI.framework */,
 				E692F1911736E66B005B0438 /* QuartzCore.framework */,
 				E6D0DD85173693D700F3E399 /* UIKit.framework */,
 				E6D0DD87173693D700F3E399 /* Foundation.framework */,
@@ -424,6 +446,7 @@
 		E6D0DDC71736951A00F3E399 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E690AF0B17378496005D20B8 /* CoreData */,
 				E6D0DDC81736951A00F3E399 /* Images */,
 				E6D0DDCF1736951A00F3E399 /* Localizations */,
 				E6D0DDD01736951A00F3E399 /* Nibs */,
@@ -795,6 +818,7 @@
 				E690AF0217377EE2005D20B8 /* OAuthXRequest.m in Sources */,
 				E690AF0317377EE2005D20B8 /* OAuthXResponse.m in Sources */,
 				E690AF0417377EE2005D20B8 /* OAuthXToken.m in Sources */,
+				E690AF0E17378496005D20B8 /* Contacts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,6 +997,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E690AF0C17378496005D20B8 /* Contacts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E690AF0D17378496005D20B8 /* Contacts.xcdatamodel */,
+			);
+			currentVersion = E690AF0D17378496005D20B8 /* Contacts.xcdatamodel */;
+			path = Contacts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E6D0DD7A173693D700F3E399 /* Project object */;
 }

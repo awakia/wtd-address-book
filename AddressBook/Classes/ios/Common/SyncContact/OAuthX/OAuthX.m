@@ -23,7 +23,7 @@
  ************************************************************************************/
 
 static NSString* kAuthorizeURL = @"https://www.oauthx.com/authorize/";
-static NSString* kProxyURL = @"https://www.oauthx.com/proxy";
+//static NSString* kProxyURL = @"https://www.oauthx.com/proxy";
 
 /************************************************************************************
  ** Implementation

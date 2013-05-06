@@ -18,7 +18,7 @@
 #import "ImportOperation.h"
 #import "AppDelegate.h"
 #import "Contact.h"
-#import "UIHelper.h"
+//#import "UIHelper.h"
 
 @implementation ImportOperation
 @synthesize delegate;
@@ -78,10 +78,13 @@
 }
 
 - (void)request:(OAuthXRequest *)request didFailWithError:(NSError *)error {
+
     NSLog(@"%@", [error localizedDescription]);
+    /*
     [UIHelper alertWithTitle:[NSString stringWithFormat: @"Import from %@ failed.", request.service] 
                      message:[NSString stringWithFormat: @"Failed to import contacts from %@. Please check your connection and try again.", request.service] 
                     delegate:self];
+     */
 }
 
 

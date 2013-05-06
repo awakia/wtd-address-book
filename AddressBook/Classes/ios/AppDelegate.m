@@ -68,4 +68,24 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 }
 
 
+#pragma mark - api
+- (NSString *) photosPath {
+    if (photosPath_ == NULL) {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        photosPath_ = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        photosPath_ = [photosPath_ stringByAppendingPathComponent:@"/Photos"];
+
+        NSError *error;
+        if(![fileManager fileExistsAtPath:photosPath_]) {
+            NSLog(@"Creating cached images dir: %@", photosPath_);
+            if(![fileManager createDirectoryAtPath:photosPath_ withIntermediateDirectories:YES attributes:nil error:&error]) {
+                NSLog(@"Failed to create cache folder: %@", [error localizedDescription]);
+            }
+        }
+    }
+
+    return photosPath_;
+}
+
+
 @end
