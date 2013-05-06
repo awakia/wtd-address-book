@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */; };
+		E690AEB1173778E1005D20B8 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E690AEB0173778E1005D20B8 /* FriendListCell.xib */; };
+		E690AEB917377906005D20B8 /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEB617377906005D20B8 /* FriendListCell.m */; };
+		E690AEEE17377EE2005D20B8 /* AddressBookImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEBC17377EE2005D20B8 /* AddressBookImportOperation.m */; };
+		E690AEEF17377EE2005D20B8 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEBE17377EE2005D20B8 /* Contact.m */; };
+		E690AEF017377EE2005D20B8 /* FacebookImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEC017377EE2005D20B8 /* FacebookImportOperation.m */; };
+		E690AEF117377EE2005D20B8 /* GeniImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEC217377EE2005D20B8 /* GeniImportOperation.m */; };
+		E690AEF217377EE2005D20B8 /* GoogleImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEC417377EE2005D20B8 /* GoogleImportOperation.m */; };
+		E690AEF317377EE2005D20B8 /* ImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEC617377EE2005D20B8 /* ImportOperation.m */; };
+		E690AEF417377EE2005D20B8 /* MicrosoftImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEC817377EE2005D20B8 /* MicrosoftImportOperation.m */; };
+		E690AEF517377EE2005D20B8 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AECC17377EE2005D20B8 /* NSObject+SBJson.m */; };
+		E690AEF617377EE2005D20B8 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AECF17377EE2005D20B8 /* SBJsonParser.m */; };
+		E690AEF717377EE2005D20B8 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AED117377EE2005D20B8 /* SBJsonStreamParser.m */; };
+		E690AEF817377EE2005D20B8 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AED317377EE2005D20B8 /* SBJsonStreamParserAccumulator.m */; };
+		E690AEF917377EE2005D20B8 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AED517377EE2005D20B8 /* SBJsonStreamParserAdapter.m */; };
+		E690AEFA17377EE2005D20B8 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AED717377EE2005D20B8 /* SBJsonStreamParserState.m */; };
+		E690AEFB17377EE2005D20B8 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AED917377EE2005D20B8 /* SBJsonStreamWriter.m */; };
+		E690AEFC17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEDB17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.m */; };
+		E690AEFD17377EE2005D20B8 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEDD17377EE2005D20B8 /* SBJsonStreamWriterState.m */; };
+		E690AEFE17377EE2005D20B8 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEDF17377EE2005D20B8 /* SBJsonTokeniser.m */; };
+		E690AEFF17377EE2005D20B8 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEE117377EE2005D20B8 /* SBJsonUTF8Stream.m */; };
+		E690AF0017377EE2005D20B8 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEE317377EE2005D20B8 /* SBJsonWriter.m */; };
+		E690AF0117377EE2005D20B8 /* OAuthX.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEE617377EE2005D20B8 /* OAuthX.m */; };
+		E690AF0217377EE2005D20B8 /* OAuthXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEE817377EE2005D20B8 /* OAuthXRequest.m */; };
+		E690AF0317377EE2005D20B8 /* OAuthXResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEEA17377EE2005D20B8 /* OAuthXResponse.m */; };
+		E690AF0417377EE2005D20B8 /* OAuthXToken.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEED17377EE2005D20B8 /* OAuthXToken.m */; };
 		E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E692F1891736D2EC005B0438 /* LoginViewController.xib */; };
 		E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18C1736D896005B0438 /* SyncContactViewController.m */; };
 		E692F1901736E402005B0438 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E692F18F1736E402005B0438 /* TutorialViewController.m */; };
@@ -58,6 +84,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E690AEAB17377766005D20B8 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
+		E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewControllerFriendListViewController.m; sourceTree = "<group>"; };
+		E690AEB0173778E1005D20B8 /* FriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
+		E690AEB517377906005D20B8 /* FriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListCell.h; sourceTree = "<group>"; };
+		E690AEB617377906005D20B8 /* FriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListCell.m; sourceTree = "<group>"; };
+		E690AEBB17377EE2005D20B8 /* AddressBookImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookImportOperation.h; sourceTree = "<group>"; };
+		E690AEBC17377EE2005D20B8 /* AddressBookImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookImportOperation.m; sourceTree = "<group>"; };
+		E690AEBD17377EE2005D20B8 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		E690AEBE17377EE2005D20B8 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		E690AEBF17377EE2005D20B8 /* FacebookImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookImportOperation.h; sourceTree = "<group>"; };
+		E690AEC017377EE2005D20B8 /* FacebookImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookImportOperation.m; sourceTree = "<group>"; };
+		E690AEC117377EE2005D20B8 /* GeniImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeniImportOperation.h; sourceTree = "<group>"; };
+		E690AEC217377EE2005D20B8 /* GeniImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeniImportOperation.m; sourceTree = "<group>"; };
+		E690AEC317377EE2005D20B8 /* GoogleImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleImportOperation.h; sourceTree = "<group>"; };
+		E690AEC417377EE2005D20B8 /* GoogleImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleImportOperation.m; sourceTree = "<group>"; };
+		E690AEC517377EE2005D20B8 /* ImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportOperation.h; sourceTree = "<group>"; };
+		E690AEC617377EE2005D20B8 /* ImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportOperation.m; sourceTree = "<group>"; };
+		E690AEC717377EE2005D20B8 /* MicrosoftImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicrosoftImportOperation.h; sourceTree = "<group>"; };
+		E690AEC817377EE2005D20B8 /* MicrosoftImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicrosoftImportOperation.m; sourceTree = "<group>"; };
+		E690AECB17377EE2005D20B8 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		E690AECC17377EE2005D20B8 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		E690AECD17377EE2005D20B8 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		E690AECE17377EE2005D20B8 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		E690AECF17377EE2005D20B8 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		E690AED017377EE2005D20B8 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		E690AED117377EE2005D20B8 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		E690AED217377EE2005D20B8 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		E690AED317377EE2005D20B8 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		E690AED417377EE2005D20B8 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		E690AED517377EE2005D20B8 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		E690AED617377EE2005D20B8 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		E690AED717377EE2005D20B8 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		E690AED817377EE2005D20B8 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		E690AED917377EE2005D20B8 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		E690AEDA17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		E690AEDB17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		E690AEDC17377EE2005D20B8 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		E690AEDD17377EE2005D20B8 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		E690AEDE17377EE2005D20B8 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		E690AEDF17377EE2005D20B8 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		E690AEE017377EE2005D20B8 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		E690AEE117377EE2005D20B8 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		E690AEE217377EE2005D20B8 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		E690AEE317377EE2005D20B8 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E690AEE417377EE2005D20B8 /* OAuthX-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuthX-Prefix.pch"; sourceTree = "<group>"; };
+		E690AEE517377EE2005D20B8 /* OAuthX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthX.h; sourceTree = "<group>"; };
+		E690AEE617377EE2005D20B8 /* OAuthX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthX.m; sourceTree = "<group>"; };
+		E690AEE717377EE2005D20B8 /* OAuthXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthXRequest.h; sourceTree = "<group>"; };
+		E690AEE817377EE2005D20B8 /* OAuthXRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthXRequest.m; sourceTree = "<group>"; };
+		E690AEE917377EE2005D20B8 /* OAuthXResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthXResponse.h; sourceTree = "<group>"; };
+		E690AEEA17377EE2005D20B8 /* OAuthXResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthXResponse.m; sourceTree = "<group>"; };
+		E690AEEB17377EE2005D20B8 /* OAuthXSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthXSDK.h; sourceTree = "<group>"; };
+		E690AEEC17377EE2005D20B8 /* OAuthXToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthXToken.h; sourceTree = "<group>"; };
+		E690AEED17377EE2005D20B8 /* OAuthXToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthXToken.m; sourceTree = "<group>"; };
 		E692F1891736D2EC005B0438 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E692F18B1736D896005B0438 /* SyncContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncContactViewController.h; sourceTree = "<group>"; };
 		E692F18C1736D896005B0438 /* SyncContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncContactViewController.m; sourceTree = "<group>"; };
@@ -142,6 +222,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E690AEAE173778E1005D20B8 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				E690AEAF173778E1005D20B8 /* Cell */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		E690AEAF173778E1005D20B8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E690AEB0173778E1005D20B8 /* FriendListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E690AEB217377906005D20B8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E690AEB517377906005D20B8 /* FriendListCell.h */,
+				E690AEB617377906005D20B8 /* FriendListCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E690AEBA17377EE2005D20B8 /* SyncContact */ = {
+			isa = PBXGroup;
+			children = (
+				E690AEBB17377EE2005D20B8 /* AddressBookImportOperation.h */,
+				E690AEBC17377EE2005D20B8 /* AddressBookImportOperation.m */,
+				E690AEBD17377EE2005D20B8 /* Contact.h */,
+				E690AEBE17377EE2005D20B8 /* Contact.m */,
+				E690AEBF17377EE2005D20B8 /* FacebookImportOperation.h */,
+				E690AEC017377EE2005D20B8 /* FacebookImportOperation.m */,
+				E690AEC117377EE2005D20B8 /* GeniImportOperation.h */,
+				E690AEC217377EE2005D20B8 /* GeniImportOperation.m */,
+				E690AEC317377EE2005D20B8 /* GoogleImportOperation.h */,
+				E690AEC417377EE2005D20B8 /* GoogleImportOperation.m */,
+				E690AEC517377EE2005D20B8 /* ImportOperation.h */,
+				E690AEC617377EE2005D20B8 /* ImportOperation.m */,
+				E690AEC717377EE2005D20B8 /* MicrosoftImportOperation.h */,
+				E690AEC817377EE2005D20B8 /* MicrosoftImportOperation.m */,
+				E690AEC917377EE2005D20B8 /* OAuthX */,
+			);
+			path = SyncContact;
+			sourceTree = "<group>";
+		};
+		E690AEC917377EE2005D20B8 /* OAuthX */ = {
+			isa = PBXGroup;
+			children = (
+				E690AECA17377EE2005D20B8 /* JSON */,
+				E690AEE417377EE2005D20B8 /* OAuthX-Prefix.pch */,
+				E690AEE517377EE2005D20B8 /* OAuthX.h */,
+				E690AEE617377EE2005D20B8 /* OAuthX.m */,
+				E690AEE717377EE2005D20B8 /* OAuthXRequest.h */,
+				E690AEE817377EE2005D20B8 /* OAuthXRequest.m */,
+				E690AEE917377EE2005D20B8 /* OAuthXResponse.h */,
+				E690AEEA17377EE2005D20B8 /* OAuthXResponse.m */,
+				E690AEEB17377EE2005D20B8 /* OAuthXSDK.h */,
+				E690AEEC17377EE2005D20B8 /* OAuthXToken.h */,
+				E690AEED17377EE2005D20B8 /* OAuthXToken.m */,
+			);
+			path = OAuthX;
+			sourceTree = "<group>";
+		};
+		E690AECA17377EE2005D20B8 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E690AECB17377EE2005D20B8 /* NSObject+SBJson.h */,
+				E690AECC17377EE2005D20B8 /* NSObject+SBJson.m */,
+				E690AECD17377EE2005D20B8 /* SBJson.h */,
+				E690AECE17377EE2005D20B8 /* SBJsonParser.h */,
+				E690AECF17377EE2005D20B8 /* SBJsonParser.m */,
+				E690AED017377EE2005D20B8 /* SBJsonStreamParser.h */,
+				E690AED117377EE2005D20B8 /* SBJsonStreamParser.m */,
+				E690AED217377EE2005D20B8 /* SBJsonStreamParserAccumulator.h */,
+				E690AED317377EE2005D20B8 /* SBJsonStreamParserAccumulator.m */,
+				E690AED417377EE2005D20B8 /* SBJsonStreamParserAdapter.h */,
+				E690AED517377EE2005D20B8 /* SBJsonStreamParserAdapter.m */,
+				E690AED617377EE2005D20B8 /* SBJsonStreamParserState.h */,
+				E690AED717377EE2005D20B8 /* SBJsonStreamParserState.m */,
+				E690AED817377EE2005D20B8 /* SBJsonStreamWriter.h */,
+				E690AED917377EE2005D20B8 /* SBJsonStreamWriter.m */,
+				E690AEDA17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.h */,
+				E690AEDB17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.m */,
+				E690AEDC17377EE2005D20B8 /* SBJsonStreamWriterState.h */,
+				E690AEDD17377EE2005D20B8 /* SBJsonStreamWriterState.m */,
+				E690AEDE17377EE2005D20B8 /* SBJsonTokeniser.h */,
+				E690AEDF17377EE2005D20B8 /* SBJsonTokeniser.m */,
+				E690AEE017377EE2005D20B8 /* SBJsonUTF8Stream.h */,
+				E690AEE117377EE2005D20B8 /* SBJsonUTF8Stream.m */,
+				E690AEE217377EE2005D20B8 /* SBJsonWriter.h */,
+				E690AEE317377EE2005D20B8 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		E692F1881736D2EC005B0438 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +330,9 @@
 		E692F1951736F66A005B0438 /* RootView */ = {
 			isa = PBXGroup;
 			children = (
+				E690AEB217377906005D20B8 /* Cell */,
+				E690AEAB17377766005D20B8 /* FriendListViewController.h */,
+				E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */,
 				E692F1981736F66B005B0438 /* RootViewController.h */,
 				E692F1991736F66B005B0438 /* RootViewController.m */,
 			);
@@ -298,6 +478,7 @@
 		E6D0DDD01736951A00F3E399 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				E690AEAE173778E1005D20B8 /* RootView */,
 				E692F1881736D2EC005B0438 /* Login */,
 			);
 			path = Nibs;
@@ -323,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				E6D0DDDC1736993400F3E399 /* Common.h */,
+				E690AEBA17377EE2005D20B8 /* SyncContact */,
 				E6D0DDDD1736993400F3E399 /* NSFoundation-Extension */,
 				E6D0DDE01736993400F3E399 /* UIKit */,
 				E6D0DDE81736993400F3E399 /* UIKit-Extension */,
@@ -538,6 +720,7 @@
 				E6D0DE121736C40100F3E399 /* tutorial_button_close.png in Resources */,
 				E692F18A1736D2EC005B0438 /* LoginViewController.xib in Resources */,
 				E692F1941736F344005B0438 /* RootViewStoryboard.storyboard in Resources */,
+				E690AEB1173778E1005D20B8 /* FriendListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +770,31 @@
 				E692F18D1736D896005B0438 /* SyncContactViewController.m in Sources */,
 				E692F1901736E402005B0438 /* TutorialViewController.m in Sources */,
 				E692F19C1736F66B005B0438 /* RootViewController.m in Sources */,
+				E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */,
+				E690AEB917377906005D20B8 /* FriendListCell.m in Sources */,
+				E690AEEE17377EE2005D20B8 /* AddressBookImportOperation.m in Sources */,
+				E690AEEF17377EE2005D20B8 /* Contact.m in Sources */,
+				E690AEF017377EE2005D20B8 /* FacebookImportOperation.m in Sources */,
+				E690AEF117377EE2005D20B8 /* GeniImportOperation.m in Sources */,
+				E690AEF217377EE2005D20B8 /* GoogleImportOperation.m in Sources */,
+				E690AEF317377EE2005D20B8 /* ImportOperation.m in Sources */,
+				E690AEF417377EE2005D20B8 /* MicrosoftImportOperation.m in Sources */,
+				E690AEF517377EE2005D20B8 /* NSObject+SBJson.m in Sources */,
+				E690AEF617377EE2005D20B8 /* SBJsonParser.m in Sources */,
+				E690AEF717377EE2005D20B8 /* SBJsonStreamParser.m in Sources */,
+				E690AEF817377EE2005D20B8 /* SBJsonStreamParserAccumulator.m in Sources */,
+				E690AEF917377EE2005D20B8 /* SBJsonStreamParserAdapter.m in Sources */,
+				E690AEFA17377EE2005D20B8 /* SBJsonStreamParserState.m in Sources */,
+				E690AEFB17377EE2005D20B8 /* SBJsonStreamWriter.m in Sources */,
+				E690AEFC17377EE2005D20B8 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				E690AEFD17377EE2005D20B8 /* SBJsonStreamWriterState.m in Sources */,
+				E690AEFE17377EE2005D20B8 /* SBJsonTokeniser.m in Sources */,
+				E690AEFF17377EE2005D20B8 /* SBJsonUTF8Stream.m in Sources */,
+				E690AF0017377EE2005D20B8 /* SBJsonWriter.m in Sources */,
+				E690AF0117377EE2005D20B8 /* OAuthX.m in Sources */,
+				E690AF0217377EE2005D20B8 /* OAuthXRequest.m in Sources */,
+				E690AF0317377EE2005D20B8 /* OAuthXResponse.m in Sources */,
+				E690AF0417377EE2005D20B8 /* OAuthXToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
