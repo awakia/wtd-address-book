@@ -20,7 +20,6 @@
 
 
 @protocol OAuthXSessionDelegate;
-@protocol OAuthXWebViewDelegate;
 
 
 @interface OAuthX : NSObject <OAuthXRequestDelegate> {
@@ -33,7 +32,6 @@
 @property(nonatomic, retain) NSMutableDictionary* tokens;
 
 @property(nonatomic, assign) id<OAuthXSessionDelegate> sessionDelegate;
-@property(nonatomic, assign) id<OAuthXWebViewDelegate> webviewDelegate;
 
 @property(nonatomic, retain) OAuthXRequest* request;
 
@@ -103,17 +101,10 @@
  */
 - (void) oauthXDidLogoutFromService:(NSString *)service;
 
-@end
-
-
-@protocol OAuthXWebViewDelegate <NSObject>
-
-@optional
-
 /**
  * Called when the user successfully logged in
  * or when the access token was validated.
  */
-- (void) oauthXDidLoginWithURL:(NSURL *)loginURL;
+- (void) oauthXWillLoginWithURL:(NSURL *)loginURL;
 
 @end

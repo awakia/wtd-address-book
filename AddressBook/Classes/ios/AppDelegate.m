@@ -8,6 +8,10 @@
 #import "TutorialNavigationController.h"    // アプリ開始時、チュートリアル画面
 #import "RootViewController.h"              // アプリのルートUI
 
+#pragma mark - constant
+static NSString* kOAuthXApplicationKey = @"ebrWLfKe3lFTJbCvxzQtsOnNH66HZt0cdORUXb37"; // OAuthX iPhone Sample Application - REPLACE THIS KEY WITH YOUR OWN KEY
+static NSString* kOAuthXApplicationCallback = @"addressbook://authorize";                 // OAuthX iPhone Sample Application - REPLACE THIS KEY WITH YOUR OWN CALLBACK
+
 
 #pragma mark - implementation
 @implementation AppDelegate
@@ -17,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.oauthx = [[OAuthX alloc] initWithAppKey:kOAuthXApplicationKey andCallbackUrl:kOAuthXApplicationCallback];
+    
     BOOL isTutorial = YES;
     // アプリ開始チュートリアル or 通常
     UIViewController *vc = (isTutorial) ? [[TutorialNavigationController alloc] init] : [[RootViewController alloc] init];

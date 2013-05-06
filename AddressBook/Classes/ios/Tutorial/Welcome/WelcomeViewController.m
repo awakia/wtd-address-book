@@ -9,6 +9,9 @@
 @implementation WelcomeViewController
 
 
+#pragma mark - synthesize
+
+
 #pragma mark - initializer
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -69,6 +72,38 @@
 - (IBAction)touchedUpInsideWithPushViewControllerButton:(UIButton *)pushViewControllerButton
 {
 }
+
+
+#pragma mark - OauthXSessionDelegate
+///**
+// * Called when the user successfully logged in
+// * or when the access token was validated.
+// */
+//- (void) oauthXDidLoginToService:(NSString *)service
+//{
+//}
+//
+///**
+// * Called when the user dismissed the dialog without logging in.
+// * or when the access token was not validated.
+// */
+//- (void) oauthXDidNotLoginToService:(NSString *)service userCanceled:(BOOL)cancelled
+//{
+//}
+//
+///**
+// * Called when the user logged out.
+// */
+//- (void) oauthXDidLogoutFromService:(NSString *)service{
+//
+//}
+//
+///**
+// * Called when the user successfully logged in
+// * or when the access token was validated.
+// */
+//- (void) oauthXWillLoginWithURL:(NSURL *)loginURL{
+//}
 
 
 @end

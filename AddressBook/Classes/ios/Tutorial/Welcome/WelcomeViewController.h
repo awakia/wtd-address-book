@@ -2,6 +2,9 @@
 //  Copyright (c) Kenzan Hase. All rights reserved.
 
 
+@class WebViewController;
+
+
 #pragma mark - interface
 /// アプリ開始のログイン訴求画面
 @interface WelcomeViewController : UIViewController {

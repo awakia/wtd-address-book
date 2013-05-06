@@ -31,7 +31,7 @@ static NSString* kAuthorizeURL = @"https://www.oauthx.com/authorize/";
 
 @implementation OAuthX
 
-@synthesize appKey, callbackUrl, tokens, sessionDelegate, webviewDelegate, request;
+@synthesize appKey, callbackUrl, tokens, sessionDelegate, request;
 
 /************************************************************************************
  ** Initialization
@@ -41,7 +41,7 @@ static NSString* kAuthorizeURL = @"https://www.oauthx.com/authorize/";
  * Initialize OAuthX object with application key/id
  */
 - (id) initWithAppKey:(NSString *)newAppKey {
-    return [self initWithAppKey: newAppKey andCallbackUrl: [NSString stringWithFormat: @"oauthx%@://authorize", newAppKey]];
+    return [self initWithAppKey: newAppKey andCallbackUrl: [NSString stringWithFormat: @"addressbook%@://authorize", newAppKey]];
 }
 
 /**
@@ -92,8 +92,8 @@ static NSString* kAuthorizeURL = @"https://www.oauthx.com/authorize/";
     
     NSString *oauthXAuthorizeUrl = [OAuthXRequest serializeURL:[kAuthorizeURL stringByAppendingString:self.appKey] params:params];
     NSLog(@"%@", oauthXAuthorizeUrl);
-    if ([self.webviewDelegate respondsToSelector:@selector(oauthXDidLoginWithURL:)]) {
-        [self.webviewDelegate oauthXDidLoginWithURL:[NSURL URLWithString:oauthXAuthorizeUrl]];
+    if ([self.sessionDelegate respondsToSelector:@selector(oauthXWillLoginWithURL:)]) {
+        [self.sessionDelegate oauthXWillLoginWithURL:[NSURL URLWithString:oauthXAuthorizeUrl]];
     }
 
     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:oauthXAuthorizeUrl]];
@@ -161,6 +161,7 @@ static NSString* kAuthorizeURL = @"https://www.oauthx.com/authorize/";
      
     if ([self.sessionDelegate respondsToSelector:@selector(oauthXDidLoginToService:)]) {
         [self.sessionDelegate oauthXDidLoginToService:service];
+        return NO;
     }
     return YES;
 }
