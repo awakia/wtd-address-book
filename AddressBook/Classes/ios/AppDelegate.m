@@ -8,9 +8,8 @@
 #import "TutorialNavigationController.h"    // アプリ開始時、チュートリアル画面
 #import "RootViewController.h"              // アプリのルートUI
 
+
 #pragma mark - constant
-static NSString* kOAuthXApplicationKey = @"ebrWLfKe3lFTJbCvxzQtsOnNH66HZt0cdORUXb37"; // OAuthX iPhone Sample Application - REPLACE THIS KEY WITH YOUR OWN KEY
-static NSString* kOAuthXApplicationCallback = @"addressbook://authorize";                 // OAuthX iPhone Sample Application - REPLACE THIS KEY WITH YOUR OWN CALLBACK
 
 
 #pragma mark - implementation
@@ -21,8 +20,6 @@ static NSString* kOAuthXApplicationCallback = @"addressbook://authorize";       
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.oauthx = [[OAuthX alloc] initWithAppKey:kOAuthXApplicationKey andCallbackUrl:kOAuthXApplicationCallback];
-    
     BOOL isTutorial = YES;
     // アプリ開始チュートリアル or 通常
     UIViewController *vc = (isTutorial) ? [[TutorialNavigationController alloc] init] : [[RootViewController alloc] init];
@@ -75,23 +72,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 
 #pragma mark - api
-- (NSString *) photosPath {
-    if (photosPath_ == NULL) {
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        photosPath_ = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        photosPath_ = [photosPath_ stringByAppendingPathComponent:@"/Photos"];
-
-        NSError *error;
-        if(![fileManager fileExistsAtPath:photosPath_]) {
-            NSLog(@"Creating cached images dir: %@", photosPath_);
-            if(![fileManager createDirectoryAtPath:photosPath_ withIntermediateDirectories:YES attributes:nil error:&error]) {
-                NSLog(@"Failed to create cache folder: %@", [error localizedDescription]);
-            }
-        }
-    }
-
-    return photosPath_;
-}
 
 
 @end
