@@ -35,7 +35,7 @@
                                 </state>
                                 <connections>
                                     <action selector="touchedUpInsideWithPushViewControllerButton:" destination="2" eventType="touchUpInside" id="2a3-3A-B2Y"/>
-                                    <segue destination="K9h-A7-rmK" kind="push" id="6L5-L3-B0F"/>
+                                    <segue destination="K9h-A7-rmK" kind="push" identifier="pushSyncContactViewController" id="6L5-L3-B0F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qwd-UO-rcL">
@@ -62,7 +62,6 @@
                                 </state>
                                 <connections>
                                     <action selector="touchedUpInsideWithLoginButton:" destination="2" eventType="touchUpInside" id="u0x-9S-Uo9"/>
-                                    <segue destination="K9h-A7-rmK" kind="push" id="VBl-Qv-ksE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -512,7 +511,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="6L5-L3-B0F"/>
-    </inferredMetricsTieBreakers>
 </document>

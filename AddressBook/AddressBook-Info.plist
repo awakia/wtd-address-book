@@ -49,5 +49,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>374578069325968</string>
+	<key>FacebookDisplayName</key>
+	<string>addressbook_test</string>
 </dict>
 </plist>

@@ -2,13 +2,19 @@
 //  Copyright (c) Kenzan Hase. All rights reserved.
 
 
+#import <FacebookSDK/FacebookSDK.h>
+
+
 @class WebViewController;
 
 
 #pragma mark - interface
 /// アプリ開始のログイン訴求画面
-@interface WelcomeViewController : UIViewController {
+@interface WelcomeViewController : UIViewController <FBFriendPickerDelegate> {
 }
+
+
+#pragma mark - property
 
 
 #pragma mark - event listener

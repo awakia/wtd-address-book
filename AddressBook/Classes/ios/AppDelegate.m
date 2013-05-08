@@ -7,6 +7,7 @@
 #import "AppDelegate.h"
 #import "TutorialNavigationController.h"    // アプリ開始時、チュートリアル画面
 #import "RootViewController.h"              // アプリのルートUI
+#import <FacebookSDK/FacebookSDK.h>
 
 
 #pragma mark - constant
@@ -50,12 +51,23 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [FBAppCall handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [FBSession.activeSession close];
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    BOOL isOpen = [FBAppCall handleOpenURL:url
+                         sourceApplication:sourceApplication];
+    return isOpen;
+}
 
 #pragma mark - Notification
 /**
