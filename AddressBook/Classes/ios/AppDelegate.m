@@ -7,6 +7,7 @@
 #import "AppDelegate.h"
 #import "TutorialNavigationController.h"    // アプリ開始時、チュートリアル画面
 #import "RootViewController.h"              // アプリのルートUI
+#import "MessageViewController.h"           // メッセージ画面
 #import <FacebookSDK/FacebookSDK.h>
 
 
@@ -21,6 +22,7 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+/*
     BOOL isTutorial = YES;
     // アプリ開始チュートリアル or 通常
     UIViewController *vc = (isTutorial) ? [[TutorialNavigationController alloc] init] : [[RootViewController alloc] init];
@@ -33,6 +35,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                                              selector:@selector(tutorialDidFinishedWithNotification:)
                                                  name:kNotificationTutorialDidFinished
                                                object:nil];
+
+*/
+    MessageViewController *vc = [[MessageViewController alloc] init];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window makeKeyAndVisible];
+    [self.window setRootViewController:vc];
 
     return YES;
 }

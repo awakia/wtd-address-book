@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B116A114BBE242A588E64C17 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351CA1A70F414495AF36182B /* libPods.a */; };
+		E61ACB0A175AEFF5007A5BAE /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB07175AEFF5007A5BAE /* MessageViewController.m */; };
 		E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */; };
 		E690AEB1173778E1005D20B8 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E690AEB0173778E1005D20B8 /* FriendListCell.xib */; };
 		E690AEB917377906005D20B8 /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEB617377906005D20B8 /* FriendListCell.m */; };
@@ -72,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		351CA1A70F414495AF36182B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61ACB06175AEFF5007A5BAE /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		E61ACB07175AEFF5007A5BAE /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		E690AEAB17377766005D20B8 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewControllerFriendListViewController.m; sourceTree = "<group>"; };
 		E690AEB0173778E1005D20B8 /* FriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
@@ -145,6 +150,7 @@
 		E6D9A903173ABBB800E34890 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E6D9A905173AC17E00E34890 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E6D9A907173AC24000E34890 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EBBB3243731148E4AB025057 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = addressbook/project/Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +171,7 @@
 				E6D0DD88173693D700F3E399 /* Foundation.framework in Frameworks */,
 				E6D0DD8A173693D700F3E399 /* CoreGraphics.framework in Frameworks */,
 				E6D9A8FC173ABADD00E34890 /* FacebookSDK.framework in Frameworks */,
+				B116A114BBE242A588E64C17 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +188,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E61ACB03175AEFF5007A5BAE /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				E61ACB06175AEFF5007A5BAE /* MessageViewController.h */,
+				E61ACB07175AEFF5007A5BAE /* MessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		E690AEAE173778E1005D20B8 /* RootView */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +250,7 @@
 				E6D0DDAF173693D800F3E399 /* AddressBookTests */,
 				E6D0DD84173693D700F3E399 /* Frameworks */,
 				E6D0DD83173693D700F3E399 /* Products */,
+				EBBB3243731148E4AB025057 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +281,7 @@
 				E6D0DD87173693D700F3E399 /* Foundation.framework */,
 				E6D0DD89173693D700F3E399 /* CoreGraphics.framework */,
 				E6D0DDA9173693D800F3E399 /* SenTestingKit.framework */,
+				351CA1A70F414495AF36182B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -314,6 +332,7 @@
 				E6D0DDDB1736993400F3E399 /* Common */,
 				E6D0DE131736CD3300F3E399 /* Tutorial */,
 				E692F1951736F66A005B0438 /* RootView */,
+				E61ACB03175AEFF5007A5BAE /* Message */,
 				E6D0DDC61736951A00F3E399 /* main.m */,
 			);
 			path = ios;
@@ -539,9 +558,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6D0DDBA173693D800F3E399 /* Build configuration list for PBXNativeTarget "AddressBook" */;
 			buildPhases = (
+				1BC293ABE4984E4C85BA183C /* Check Pods Manifest.lock */,
 				E6D0DD7E173693D700F3E399 /* Sources */,
 				E6D0DD7F173693D700F3E399 /* Frameworks */,
 				E6D0DD80173693D700F3E399 /* Resources */,
+				B39BBE3F83FF4F2DB6F13DC6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,6 +655,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1BC293ABE4984E4C85BA183C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		B39BBE3F83FF4F2DB6F13DC6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/addressbook/project/Pods/Pods-resources.sh\"\n";
+		};
 		E6D0DDA6173693D800F3E399 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,6 +720,7 @@
 				E692F19C1736F66B005B0438 /* RootViewController.m in Sources */,
 				E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */,
 				E690AEB917377906005D20B8 /* FriendListCell.m in Sources */,
+				E61ACB0A175AEFF5007A5BAE /* MessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +812,7 @@
 		};
 		E6D0DDBB173693D800F3E399 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBBB3243731148E4AB025057 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -778,6 +829,7 @@
 		};
 		E6D0DDBC173693D800F3E399 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBBB3243731148E4AB025057 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
