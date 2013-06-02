@@ -18,6 +18,9 @@
 /// Viewの角丸デフォルト値
 #define kViewDefaultCornerRadius                    5
 
+/// ナビゲーションバー中央ボタンサイズ
+#define kNavigationBarCenterButtonSize             (CGSize){232.0, 32.0,}
+
 /// ナビゲーションバー影位置
 #define kNavigationBarShadowOffset                  (CGSize){0.0, 2.0,}
 /// ナビゲーションバー影不透明度
@@ -45,6 +48,9 @@
 
 
 #pragma mark - 画像
+
+/// 透明
+#define kImageClear                                 @"common_clear.png"
 
 /// 白ボタン
 #define kImageDefaultWhiteButton                    @"common_btn_cancel.png"

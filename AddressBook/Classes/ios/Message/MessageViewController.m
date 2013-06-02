@@ -4,6 +4,7 @@
 
 #import "MessageViewController.h"
 // UIKit-Extension
+#import "UINavigationBar+Custom.h"
 #import "UINavigationItem+Custom.h"
 
 
@@ -39,10 +40,15 @@
                        nil];
 
     // ナビゲーションバー
+/*
     [self.navigationItem designMessageNavigationItemWithLeftTarget:self
                                                       leftSelector:@selector(touchedUpInsideWithLeftButton:)
                                                        rightTarget:self
                                                      rightSelector:@selector(touchedUpInsideWithRightButton:)];
+*/
+    [self.navigationController.navigationBar setMessageNavigationBarButtonWithTitle:@"Wantedlyさん他3人"
+                                                                             target:self
+                                                                           selector:@selector(touchedUpInsideWithNavigationBarButton:)];
 }
 
 - (void)viewDidLoad
@@ -131,6 +137,10 @@
 }
 
 - (IBAction)touchedUpInsideWithRightButton:(UIButton *)button
+{
+}
+
+- (IBAction)touchedUpInsideWithNavigationBarButton:(UIButton *)button
 {
 }
 

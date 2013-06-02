@@ -86,6 +86,32 @@
     }
 }
 */
+- (void)setMessageNavigationBarButtonWithTitle:(NSString *)title
+                                        target:(id)target
+                                      selector:(SEL)selector
+{
+    // ボタン
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self addSubview:btn];
+
+    // 画像
+    UIImage *img = [UIImage imageNamed:kImageClear];
+    [btn setBackgroundImage:img forState:UIControlStateNormal];
+
+    // サイズ・位置
+    CGRect logoFrame;
+    logoFrame.size = kNavigationBarCenterButtonSize;
+    [btn setFrame:logoFrame];
+    btn.center = self.center;
+
+    // タイトル
+    [btn setTitle:title forState:UIControlStateNormal];
+
+    // タッチイベント
+    [btn addTarget:target
+            action:selector
+      forControlEvents:UIControlEventTouchUpInside];
+}
 
 
 @end

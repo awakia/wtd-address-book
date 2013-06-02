@@ -13,6 +13,8 @@
 		E61ACB10175AF812007A5BAE /* common_btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB0C175AF812007A5BAE /* common_btn_back.png */; };
 		E61ACB11175AF812007A5BAE /* common_btn_cancel_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB0D175AF812007A5BAE /* common_btn_cancel_pressed.png */; };
 		E61ACB12175AF812007A5BAE /* common_btn_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB0E175AF812007A5BAE /* common_btn_cancel.png */; };
+		E61ACB14175AF927007A5BAE /* common_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB13175AF927007A5BAE /* common_clear.png */; };
+		E61ACB1A175B0363007A5BAE /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB18175B0363007A5BAE /* PopupView.m */; };
 		E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */; };
 		E690AEB1173778E1005D20B8 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E690AEB0173778E1005D20B8 /* FriendListCell.xib */; };
 		E690AEB917377906005D20B8 /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEB617377906005D20B8 /* FriendListCell.m */; };
@@ -85,6 +87,9 @@
 		E61ACB0C175AF812007A5BAE /* common_btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_btn_back.png; sourceTree = "<group>"; };
 		E61ACB0D175AF812007A5BAE /* common_btn_cancel_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_btn_cancel_pressed.png; sourceTree = "<group>"; };
 		E61ACB0E175AF812007A5BAE /* common_btn_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_btn_cancel.png; sourceTree = "<group>"; };
+		E61ACB13175AF927007A5BAE /* common_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_clear.png; sourceTree = "<group>"; };
+		E61ACB17175B0363007A5BAE /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
+		E61ACB18175B0363007A5BAE /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
 		E690AEAB17377766005D20B8 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewControllerFriendListViewController.m; sourceTree = "<group>"; };
 		E690AEB0173778E1005D20B8 /* FriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
@@ -203,6 +208,15 @@
 				E61ACB07175AEFF5007A5BAE /* MessageViewController.m */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		E61ACB15175B0363007A5BAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E61ACB17175B0363007A5BAE /* PopupView.h */,
+				E61ACB18175B0363007A5BAE /* PopupView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E690AEAE173778E1005D20B8 /* RootView */ = {
@@ -448,6 +462,7 @@
 		E6D0DDE01736993400F3E399 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E61ACB15175B0363007A5BAE /* View */,
 				E6D0DDE11736993400F3E399 /* ViewController */,
 			);
 			path = UIKit;
@@ -508,6 +523,7 @@
 		E6D0DE001736A4F800F3E399 /* Illegal */ = {
 			isa = PBXGroup;
 			children = (
+				E61ACB13175AF927007A5BAE /* common_clear.png */,
 				E61ACB0B175AF812007A5BAE /* common_btn_back_pressed.png */,
 				E61ACB0C175AF812007A5BAE /* common_btn_back.png */,
 				E61ACB0D175AF812007A5BAE /* common_btn_cancel_pressed.png */,
@@ -657,6 +673,7 @@
 				E61ACB10175AF812007A5BAE /* common_btn_back.png in Resources */,
 				E61ACB11175AF812007A5BAE /* common_btn_cancel_pressed.png in Resources */,
 				E61ACB12175AF812007A5BAE /* common_btn_cancel.png in Resources */,
+				E61ACB14175AF927007A5BAE /* common_clear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +754,7 @@
 				E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */,
 				E690AEB917377906005D20B8 /* FriendListCell.m in Sources */,
 				E61ACB0A175AEFF5007A5BAE /* MessageViewController.m in Sources */,
+				E61ACB1A175B0363007A5BAE /* PopupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
