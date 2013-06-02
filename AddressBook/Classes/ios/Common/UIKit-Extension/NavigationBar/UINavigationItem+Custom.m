@@ -13,6 +13,36 @@
 
 
 #pragma mark - api
+- (void)designMessageNavigationItemWithLeftTarget:(id)leftTarget
+                                     leftSelector:(SEL)leftSelector
+                                      rightTarget:(id)rightTarget
+                                    rightSelector:(SEL)rightSelector
+{
+    [self resetBarButtonItems];
+
+    NSDictionary *leftButtons = @{
+        @"UIControlStateNormal":     [UIImage imageNamed:kImageDefaultWhiteButton],
+        @"UIControlStateHighlighted":[UIImage imageNamed:kImageDefaultWhiteButtonTouched],
+        @"UIControlStateDisabled":   [UIImage imageNamed:kImageDefaultWhiteButton],
+        @"UIControlStateSelected":   [UIImage imageNamed:kImageDefaultWhiteButtonTouched],
+        @"title":@"Ξ メニュー",
+    };
+    NSDictionary *rightButtons = @{
+        @"UIControlStateNormal":     [UIImage imageNamed:kImageDefaultWhiteButton],
+        @"UIControlStateHighlighted":[UIImage imageNamed:kImageDefaultWhiteButtonTouched],
+        @"UIControlStateDisabled":   [UIImage imageNamed:kImageDefaultWhiteButton],
+        @"UIControlStateSelected":   [UIImage imageNamed:kImageDefaultWhiteButtonTouched],
+        @"title":@"⌘ お知らせ",
+    };
+
+    [self setBarButtonItemWithLeftButtons:leftButtons
+                               leftTarget:leftTarget
+                             leftSelector:leftSelector
+                             rightButtons:rightButtons
+                              rightTarget:rightTarget
+                            rightSelector:rightSelector];
+}
+
 /*
 - (void)designWantedlyDefaultNavigationItemWithLeftTarget:(id)leftTarget
                                              leftSelector:(SEL)leftSelector

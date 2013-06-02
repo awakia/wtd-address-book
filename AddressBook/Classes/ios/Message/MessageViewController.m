@@ -37,6 +37,12 @@
                        [NSDate distantPast],
                        [NSDate date],
                        nil];
+
+    // ナビゲーションバー
+    [self.navigationItem designMessageNavigationItemWithLeftTarget:self
+                                                      leftSelector:@selector(touchedUpInsideWithLeftButton:)
+                                                       rightTarget:self
+                                                     rightSelector:@selector(touchedUpInsideWithRightButton:)];
 }
 
 - (void)viewDidLoad
@@ -122,6 +128,10 @@
 {
     [self textViewDidEndEditing:self.inputView.textView];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)touchedUpInsideWithRightButton:(UIButton *)button
+{
 }
 
 

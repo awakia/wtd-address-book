@@ -37,10 +37,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                                                object:nil];
 
 */
-    MessageViewController *vc = [[MessageViewController alloc] init];
+    MessageViewController *messageVc = [[MessageViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
-    [self.window setRootViewController:vc];
+    [self.window setRootViewController:[[NavigationController alloc] initWithRootViewController:messageVc]];
 
     return YES;
 }

@@ -42,3 +42,16 @@
 
 /// チュートリアル終了通知
 #define kNotificationTutorialDidFinished            @"NotificationTutorialDidFinished"
+
+
+#pragma mark - 画像
+
+/// 白ボタン
+#define kImageDefaultWhiteButton                    @"common_btn_cancel.png"
+/// 白ボタン押下
+#define kImageDefaultWhiteButtonTouched             @"common_btn_cancel_pressed.png"
+
+/// 白戻るボタン
+#define kImageBackWhiteButton                       @"common_btn_back"
+/// 白戻るボタン押下
+#define kImageBackWhiteButtonTouched                @"common_btn_back_pressed"
