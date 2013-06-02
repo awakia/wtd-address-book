@@ -17,6 +17,7 @@
 		E61ACB1A175B0363007A5BAE /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB18175B0363007A5BAE /* PopupView.m */; };
 		E61ACB20175B0511007A5BAE /* MessageAddressPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB1E175B0511007A5BAE /* MessageAddressPopupView.m */; };
 		E61ACB27175B055F007A5BAE /* MessageAddressPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB26175B055F007A5BAE /* MessageAddressPopupView.xib */; };
+		E61ACB2B175B253A007A5BAE /* UITableView+Touchable.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB2A175B253A007A5BAE /* UITableView+Touchable.m */; };
 		E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */; };
 		E690AEB1173778E1005D20B8 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E690AEB0173778E1005D20B8 /* FriendListCell.xib */; };
 		E690AEB917377906005D20B8 /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEB617377906005D20B8 /* FriendListCell.m */; };
@@ -95,6 +96,8 @@
 		E61ACB1D175B0511007A5BAE /* MessageAddressPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAddressPopupView.h; sourceTree = "<group>"; };
 		E61ACB1E175B0511007A5BAE /* MessageAddressPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAddressPopupView.m; sourceTree = "<group>"; };
 		E61ACB26175B055F007A5BAE /* MessageAddressPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageAddressPopupView.xib; sourceTree = "<group>"; };
+		E61ACB29175B253A007A5BAE /* UITableView+Touchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Touchable.h"; sourceTree = "<group>"; };
+		E61ACB2A175B253A007A5BAE /* UITableView+Touchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Touchable.m"; sourceTree = "<group>"; };
 		E690AEAB17377766005D20B8 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewControllerFriendListViewController.m; sourceTree = "<group>"; };
 		E690AEB0173778E1005D20B8 /* FriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
@@ -246,6 +249,15 @@
 			isa = PBXGroup;
 			children = (
 				E61ACB26175B055F007A5BAE /* MessageAddressPopupView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E61ACB28175B253A007A5BAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E61ACB29175B253A007A5BAE /* UITableView+Touchable.h */,
+				E61ACB2A175B253A007A5BAE /* UITableView+Touchable.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +531,7 @@
 				E6D0DDE91736993400F3E399 /* Button */,
 				E6D0DDEC1736993400F3E399 /* Color */,
 				E6D0DDEF1736993400F3E399 /* NavigationBar */,
+				E61ACB28175B253A007A5BAE /* View */,
 			);
 			path = "UIKit-Extension";
 			sourceTree = "<group>";
@@ -789,6 +802,7 @@
 				E61ACB0A175AEFF5007A5BAE /* MessageViewController.m in Sources */,
 				E61ACB1A175B0363007A5BAE /* PopupView.m in Sources */,
 				E61ACB20175B0511007A5BAE /* MessageAddressPopupView.m in Sources */,
+				E61ACB2B175B253A007A5BAE /* UITableView+Touchable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

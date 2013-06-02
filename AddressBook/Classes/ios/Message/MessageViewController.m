@@ -8,6 +8,7 @@
 // UIKit-Extension
 #import "UINavigationBar+Custom.h"
 #import "UINavigationItem+Custom.h"
+#import "UITableView+Touchable.h"
 
 
 #pragma mark - implementation
@@ -153,11 +154,14 @@
 
 - (IBAction)touchedUpInsideWithNavigationBarButton:(UIButton *)button
 {
+    // ポップアップ
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([MessageAddressPopupView class])
                                 bundle:nil];
     MessageAddressPopupView *popup = [nib instantiateWithOwner:nil options:nil][0];
     [popup setPopupViewDelegate:self];
     [popup appear];
+
+    [self textViewDidEndEditing:self.inputView.textView];
 }
 
 
@@ -167,6 +171,8 @@
     return [UIButton defaultSendButton];
 }
 
+
+#pragma mark - private api
 - (void)touchesBegan:(NSSet *)touches
            withEvent:(UIEvent *)event
 {

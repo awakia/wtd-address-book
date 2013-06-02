@@ -14,4 +14,12 @@
 #pragma mark - property
 
 
+#pragma mark - event listener
+/**
+ * 閉じるボタン押下
+ * @param button button
+ */
+- (IBAction)touchedUpInsideWithCloseButton:(UIButton *)button;
+
+
 @end

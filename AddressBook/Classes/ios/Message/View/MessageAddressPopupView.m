@@ -3,6 +3,7 @@
 
 
 #import "MessageAddressPopupView.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 #pragma mark - MessageAddressPopupView
@@ -10,6 +11,13 @@
 
 
 #pragma mark - synthesize
+
+
+#pragma mark - event listener
+- (IBAction)touchedUpInsideWithCloseButton:(UIButton *)button
+{
+    [self disappear];
+}
 
 
 #pragma mark - api
@@ -22,14 +30,20 @@
     // アニメーション
     self.alpha = 0.0f;
     self.contentView.frame = CGRectMake(self.contentView.frame.origin.x, self.contentView.frame.origin.y, self.contentView.frame.size.width, 0);
-    [UIView animateWithDuration:0.25f
+    [UIView animateWithDuration:1.50f
                           delay:0.0f
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^ () {
         self.alpha = 1.0f;
         self.contentView.frame = endFrame;
     }
-                     completion:^ (BOOL finished) { }];
+                     completion:^ (BOOL finished) {
+        // ポップアップ影
+        self.contentView.layer.shadowOffset = CGSizeMake(0, 0);
+        self.contentView.layer.shadowColor = [[UIColor blackColor] CGColor];
+        self.contentView.layer.shadowOpacity = 0.5f;
+        self.contentView.layer.shadowPath = [[UIBezierPath bezierPathWithRect:self.contentView.bounds] CGPath];
+    }];
 }
 
 - (void)disappear
@@ -44,5 +58,6 @@
     }
                      completion:^ (BOOL finished) { [super disappear]; }];
 }
+
 
 @end

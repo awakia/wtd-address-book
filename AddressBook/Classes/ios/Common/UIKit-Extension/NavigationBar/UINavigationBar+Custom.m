@@ -106,11 +106,15 @@
 
     // タイトル
     [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor]
+              forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor grayColor]
+              forState:UIControlStateHighlighted];
 
     // タッチイベント
     [btn addTarget:target
             action:selector
-      forControlEvents:UIControlEventTouchUpInside];
+  forControlEvents:UIControlEventTouchUpInside];
 }
 
 
