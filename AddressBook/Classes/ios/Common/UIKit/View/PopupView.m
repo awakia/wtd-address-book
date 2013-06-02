@@ -10,6 +10,7 @@
 
 
 #pragma mark - synthesize
+@synthesize backgroundView;
 @synthesize contentView;
 
 @synthesize popupViewDelegate;
@@ -20,7 +21,19 @@
 {
     // 表示
     UIWindow *window = [[UIApplication sharedApplication] windows][0];
+    self.frame = window.frame;
     [window addSubview:self];
+}
+
+- (void)disappear
+{
+    [self removeFromSuperview];
+
+    if (self.popupViewDelegate &&
+        [self.popupViewDelegate respondsToSelector:@selector(disappearWithPopupView:)]) {
+
+        [self.popupViewDelegate disappearWithPopupView:self];
+    }
 }
 
 
@@ -40,20 +53,6 @@
                                        [[[event allTouches] anyObject] locationInView:self]);
     if (contain == NO) {// ポップアップ範囲外をタッチしたら閉じる
         [self disappear];
-    }
-}
-
-/**
- * ポップアップを閉じる
- */
-- (void)disappear
-{
-    [self removeFromSuperview];
-
-    if (self.popupViewDelegate &&
-        [self.popupViewDelegate respondsToSelector:@selector(disappearWithPopupView:)]) {
-
-        [self.popupViewDelegate disappearWithPopupView:self];
     }
 }
 

@@ -25,8 +25,10 @@
 
 
 #pragma mark - property
+/// ポップアップの背景
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 /// ポップアップの中身
-@property (strong, nonatomic) UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 /// Delegate
 @property (assign) id<PopupViewDelegate> popupViewDelegate;
@@ -37,6 +39,11 @@
  * parentViewの上にポップアップ表示する
  */
 - (void)appear;
+
+/**
+ * ポップアップを閉じる
+ */
+- (void)disappear;
 
 
 @end

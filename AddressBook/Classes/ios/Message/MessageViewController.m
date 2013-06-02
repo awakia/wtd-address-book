@@ -3,6 +3,8 @@
 
 
 #import "MessageViewController.h"
+// Popup
+#import "MessageAddressPopupView.h"
 // UIKit-Extension
 #import "UINavigationBar+Custom.h"
 #import "UINavigationItem+Custom.h"
@@ -129,6 +131,15 @@
 }
 
 
+#pragma mark - PopupViewDelegate
+/**
+ * ポップアップが消えた時に呼ばれる
+ */
+- (void)disappearWithPopupView:(PopupView *)popupView
+{
+}
+
+
 #pragma mark - event listener
 - (IBAction)touchedUpInsideWithLeftButton:(UIButton *)button
 {
@@ -142,6 +153,11 @@
 
 - (IBAction)touchedUpInsideWithNavigationBarButton:(UIButton *)button
 {
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([MessageAddressPopupView class])
+                                bundle:nil];
+    MessageAddressPopupView *popup = [nib instantiateWithOwner:nil options:nil][0];
+    [popup setPopupViewDelegate:self];
+    [popup appear];
 }
 
 

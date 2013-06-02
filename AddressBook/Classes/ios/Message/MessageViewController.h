@@ -3,11 +3,12 @@
 
 
 #import "JSMessagesViewController.h"
+#import "PopupView.h"
 
 
 #pragma mark - interface
 /// チャット画面
-@interface MessageViewController : JSMessagesViewController <JSMessagesViewDelegate, JSMessagesViewDataSource> {
+@interface MessageViewController : JSMessagesViewController <JSMessagesViewDelegate, JSMessagesViewDataSource, PopupViewDelegate> {
 }
 
 
