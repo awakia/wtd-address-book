@@ -37,8 +37,9 @@
 #pragma mark - api
 /**
  * parentViewの上にポップアップ表示する
+ * @param parentView ポップアップ表示する親View
  */
-- (void)appear;
+- (void)appearInView:(UIView *)parentView;
 
 /**
  * ポップアップを閉じる

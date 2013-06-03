@@ -61,3 +61,6 @@
 #define kImageBackWhiteButton                       @"common_btn_back"
 /// 白戻るボタン押下
 #define kImageBackWhiteButtonTouched                @"common_btn_back_pressed"
+
+/// 矢印ボタン
+#define kImageArrowButton                           @"common_button_arrow"

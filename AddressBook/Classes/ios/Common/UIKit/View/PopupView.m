@@ -17,12 +17,11 @@
 
 
 #pragma mark - api
-- (void)appear
+- (void)appearInView:(UIView *)parentView;
 {
     // 表示
-    UIWindow *window = [[UIApplication sharedApplication] windows][0];
-    self.frame = window.frame;
-    [window addSubview:self];
+    self.frame = parentView.frame;
+    [parentView addSubview:self];
 }
 
 - (void)disappear

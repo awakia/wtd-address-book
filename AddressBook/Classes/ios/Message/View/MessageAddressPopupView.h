@@ -5,21 +5,27 @@
 #import "PopupView.h"
 
 
+#pragma mark - class
+@class FUIButton;
+
+
 #pragma mark - MessageAddressPopupView
-/// ポップアップ
+/// to,cc,bccアドレス追加用のポップアップUI
 @interface MessageAddressPopupView : PopupView {
 }
 
 
 #pragma mark - property
+/// to:
+@property (weak, nonatomic) IBOutlet FUIButton *toButton;
+/// cc:
+@property (weak, nonatomic) IBOutlet FUIButton *ccButton;
+/// bcc:
+@property (weak, nonatomic) IBOutlet FUIButton *bccButton;
 
 
 #pragma mark - event listener
-/**
- * 閉じるボタン押下
- * @param button button
- */
-- (IBAction)touchedUpInsideWithCloseButton:(UIButton *)button;
+- (IBAction)touchedUpInsidWithButton:(UIButton *)button;
 
 
 @end

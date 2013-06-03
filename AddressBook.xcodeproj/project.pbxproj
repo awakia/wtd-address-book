@@ -70,6 +70,7 @@
 		E6D9A904173ABBB800E34890 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D9A903173ABBB800E34890 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E6D9A906173AC17E00E34890 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D9A905173AC17E00E34890 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E6D9A908173AC24000E34890 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D9A907173AC24000E34890 /* libsqlite3.0.dylib */; };
+		E6E3C88F175D005D009915AB /* common_button_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E3C88E175D005C009915AB /* common_button_arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		E6D9A903173ABBB800E34890 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		E6D9A905173AC17E00E34890 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E6D9A907173AC24000E34890 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		E6E3C88E175D005C009915AB /* common_button_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_button_arrow.png; sourceTree = "<group>"; };
 		EBBB3243731148E4AB025057 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = addressbook/project/Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -418,19 +420,12 @@
 		E6D0DDC81736951A00F3E399 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E6D0DDC91736951A00F3E399 /* Common */,
 				E6D0DDCA1736951A00F3E399 /* Icon */,
 				E6D0DDCB1736951A00F3E399 /* Splash */,
+				E6E3C88D175D005C009915AB /* Common */,
 				E6D0DE001736A4F800F3E399 /* Illegal */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		E6D0DDC91736951A00F3E399 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		E6D0DDCA1736951A00F3E399 /* Icon */ = {
@@ -624,6 +619,14 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		E6E3C88D175D005C009915AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E6E3C88E175D005C009915AB /* common_button_arrow.png */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -720,6 +723,7 @@
 				E61ACB12175AF812007A5BAE /* common_btn_cancel.png in Resources */,
 				E61ACB14175AF927007A5BAE /* common_clear.png in Resources */,
 				E61ACB27175B055F007A5BAE /* MessageAddressPopupView.xib in Resources */,
+				E6E3C88F175D005D009915AB /* common_button_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

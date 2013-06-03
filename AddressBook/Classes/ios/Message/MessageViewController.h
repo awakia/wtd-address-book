@@ -6,6 +6,10 @@
 #import "PopupView.h"
 
 
+#pragma mark - class
+@class MessageAddressPopupView;
+
+
 #pragma mark - interface
 /// チャット画面
 @interface MessageViewController : JSMessagesViewController <JSMessagesViewDelegate, JSMessagesViewDataSource, PopupViewDelegate> {
@@ -17,6 +21,9 @@
 @property (strong) NSMutableArray *messages;
 /// メッセージ投稿時間一覧
 @property (strong) NSMutableArray *timestamps;
+
+/// アドレス追加用UI
+@property (weak) MessageAddressPopupView *addressPopupView;
 
 
 @end

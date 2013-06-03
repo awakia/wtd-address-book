@@ -19,6 +19,8 @@
 @synthesize messages;
 @synthesize timestamps;
 
+@synthesize addressPopupView;
+
 
 #pragma mark - lifecycle
 - (void)loadView
@@ -43,15 +45,15 @@
                        nil];
 
     // ナビゲーションバー
-/*
-    [self.navigationItem designMessageNavigationItemWithLeftTarget:self
-                                                      leftSelector:@selector(touchedUpInsideWithLeftButton:)
+    [self.navigationItem designMessageNavigationItemWithLeftTarget:nil
+                                                      leftSelector:NULL
                                                        rightTarget:self
                                                      rightSelector:@selector(touchedUpInsideWithRightButton:)];
-*/
+/*
     [self.navigationController.navigationBar setMessageNavigationBarButtonWithTitle:@"Wantedlyさん他3人"
                                                                              target:self
                                                                            selector:@selector(touchedUpInsideWithNavigationBarButton:)];
+*/
 }
 
 - (void)viewDidLoad
@@ -138,6 +140,7 @@
  */
 - (void)disappearWithPopupView:(PopupView *)popupView
 {
+    self.addressPopupView = nil;
 }
 
 
@@ -150,18 +153,27 @@
 
 - (IBAction)touchedUpInsideWithRightButton:(UIButton *)button
 {
+    // ポップアップ非表示
+    if (self.addressPopupView) {
+        [self.addressPopupView disappear];
+        button.transform = CGAffineTransformMakeRotation(0);
+    }
+    // ポップアップ表示
+    else {
+        UINib *nib = [UINib nibWithNibName:NSStringFromClass([MessageAddressPopupView class])
+                                    bundle:nil];
+        MessageAddressPopupView *popup = [nib instantiateWithOwner:nil options:nil][0];
+        [popup setPopupViewDelegate:self];
+        [popup appearInView:self.view];
+        self.addressPopupView = popup;
+
+        [self textViewDidEndEditing:self.inputView.textView];
+        button.transform = CGAffineTransformMakeRotation(M_PI+0.00001f);
+    }
 }
 
 - (IBAction)touchedUpInsideWithNavigationBarButton:(UIButton *)button
 {
-    // ポップアップ
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass([MessageAddressPopupView class])
-                                bundle:nil];
-    MessageAddressPopupView *popup = [nib instantiateWithOwner:nil options:nil][0];
-    [popup setPopupViewDelegate:self];
-    [popup appear];
-
-    [self textViewDidEndEditing:self.inputView.textView];
 }
 
 

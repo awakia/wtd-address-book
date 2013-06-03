@@ -19,25 +19,14 @@
                                     rightSelector:(SEL)rightSelector
 {
     [self resetBarButtonItems];
-
-    NSDictionary *leftButtons = @{
-        @"UIControlStateNormal":     [UIImage imageNamed:kImageDefaultWhiteButton],
-        @"UIControlStateHighlighted":[UIImage imageNamed:kImageDefaultWhiteButtonTouched],
-        @"UIControlStateDisabled":   [UIImage imageNamed:kImageDefaultWhiteButton],
-        @"UIControlStateSelected":   [UIImage imageNamed:kImageDefaultWhiteButtonTouched],
-        @"title":@"Ξ メニュー",
-    };
     NSDictionary *rightButtons = @{
-        @"UIControlStateNormal":     [UIImage imageNamed:kImageDefaultWhiteButton],
-        @"UIControlStateHighlighted":[UIImage imageNamed:kImageDefaultWhiteButtonTouched],
-        @"UIControlStateDisabled":   [UIImage imageNamed:kImageDefaultWhiteButton],
-        @"UIControlStateSelected":   [UIImage imageNamed:kImageDefaultWhiteButtonTouched],
-        @"title":@"⌘ お知らせ",
+        @"UIControlStateNormal":     [UIImage imageNamed:kImageArrowButton],
+        @"title":@"",
     };
 
-    [self setBarButtonItemWithLeftButtons:leftButtons
-                               leftTarget:leftTarget
-                             leftSelector:leftSelector
+    [self setBarButtonItemWithLeftButtons:nil
+                               leftTarget:nil
+                             leftSelector:NULL
                              rightButtons:rightButtons
                               rightTarget:rightTarget
                             rightSelector:rightSelector];
