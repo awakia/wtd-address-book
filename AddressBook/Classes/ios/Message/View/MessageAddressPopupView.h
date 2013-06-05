@@ -16,12 +16,18 @@
 
 
 #pragma mark - property
-/// to:
+/// TO:ボタン
 @property (weak, nonatomic) IBOutlet FUIButton *toButton;
-/// cc:
+/// CC:ボタン
 @property (weak, nonatomic) IBOutlet FUIButton *ccButton;
-/// bcc:
+/// BCC:ボタン
 @property (weak, nonatomic) IBOutlet FUIButton *bccButton;
+/// TO:View
+@property (weak, nonatomic) IBOutlet UIView *toView;
+/// CC:View
+@property (weak, nonatomic) IBOutlet UIView *ccView;
+/// BCC:View
+@property (weak, nonatomic) IBOutlet UIView *bccView;
 
 
 #pragma mark - event listener

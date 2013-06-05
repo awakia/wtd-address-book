@@ -1,12 +1,15 @@
 PODS:
+  - DragAndDropTableView (0.1.1)
   - FlatUIKit (1.1)
   - JSMessagesViewController (1.1.0)
 
 DEPENDENCIES:
+  - DragAndDropTableView
   - FlatUIKit
   - JSMessagesViewController
 
 SPEC CHECKSUMS:
+  DragAndDropTableView: d35259221911439f2d85a3d9e33d8889617a6d92
   FlatUIKit: 3b15b582ffcfa4e392bedc4d3c5461f9b11c1cc2
   JSMessagesViewController: 0e2c2787ea17a81be9c6a2be2669ca4819e0cba9
 

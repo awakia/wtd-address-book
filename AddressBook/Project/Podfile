@@ -2,3 +2,4 @@ platform :ios, "5.0"
 xcodeproj '../../AddressBook.xcodeproj'
 pod 'JSMessagesViewController'
 pod 'FlatUIKit'
+pod 'DragAndDropTableView'

@@ -6,6 +6,12 @@
 // project.
 
 
+// DragAndDropTableView
+#define COCOAPODS_POD_AVAILABLE_DragAndDropTableView
+#define COCOAPODS_VERSION_MAJOR_DragAndDropTableView 0
+#define COCOAPODS_VERSION_MINOR_DragAndDropTableView 1
+#define COCOAPODS_VERSION_PATCH_DragAndDropTableView 1
+
 // FlatUIKit
 #define COCOAPODS_POD_AVAILABLE_FlatUIKit
 #define COCOAPODS_VERSION_MAJOR_FlatUIKit 1
