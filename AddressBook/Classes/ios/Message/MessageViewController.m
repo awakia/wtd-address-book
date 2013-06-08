@@ -3,9 +3,14 @@
 
 
 #import "MessageViewController.h"
+#import <QuartzCore/QuartzCore.h>
 // Popup
 #import "MessageAddressPopupView.h"
+// UIKit
+#import "FUIButton+Highlighted.h"
 // UIKit-Extension
+#import "UIColor+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
 #import "UINavigationBar+Custom.h"
 #import "UINavigationItem+Custom.h"
 #import "UITableView+Touchable.h"
@@ -45,15 +50,25 @@
                        nil];
 
     // ナビゲーションバー
-    [self.navigationItem designMessageNavigationItemWithLeftTarget:nil
-                                                      leftSelector:NULL
-                                                       rightTarget:self
-                                                     rightSelector:@selector(touchedUpInsideWithRightButton:)];
-/*
-    [self.navigationController.navigationBar setMessageNavigationBarButtonWithTitle:@"Wantedlyさん他3人"
-                                                                             target:self
-                                                                           selector:@selector(touchedUpInsideWithNavigationBarButton:)];
-*/
+    {   // ボタン設定
+    FUIButton *rightButton = [FUIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *rightButtonImage = [UIImage imageNamed:kImageArrowButton];
+    const CGFloat offset = 6;
+    [rightButton setButtonColor:[UIColor alizarinColor]];
+    [rightButton setHighlightedColor:[UIColor pomegranateColor]];
+    [rightButton setImage:rightButtonImage forState:UIControlStateNormal];
+    [rightButton setFrame:CGRectMake(0, 0, rightButtonImage.size.width/2+offset*2, rightButtonImage.size.height/2+offset*2)];
+    [rightButton setImageEdgeInsets:UIEdgeInsetsMake(offset, offset, offset, offset)];
+    [rightButton setCornerRadius:4];
+    [rightButton setClipsToBounds:YES];
+    [rightButton addTarget:self
+                    action:@selector(touchedUpInsideWithRightButton:)
+          forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationItem setBarButtonItemWithLeftButton:nil
+                                            rightButton:rightButton];
+    }
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor cloudsColor]];
+    [self.navigationController.navigationBar setNavigationBarShadow];
 }
 
 - (void)viewDidLoad
@@ -170,10 +185,6 @@
         [self textViewDidEndEditing:self.inputView.textView];
         button.transform = CGAffineTransformMakeRotation(M_PI+0.00001f);
     }
-}
-
-- (IBAction)touchedUpInsideWithNavigationBarButton:(UIButton *)button
-{
 }
 
 

@@ -8,45 +8,15 @@
 
 
 /**
- * メッセージ画面のナビゲーションアイテムをデザイン
- * @param leftTarget leftTarget
- * @param leftSelector leftSelector
- * @param rightTarget rightTarget
- * @param rightSeclector rightSeclector
+ * NavigationItemを設定
+ * @param leftButton leftButton
+ * @param rightButton rightButton
  */
-- (void)designMessageNavigationItemWithLeftTarget:(id)leftTarget
-                                     leftSelector:(SEL)leftSelector
-                                      rightTarget:(id)rightTarget
-                                    rightSelector:(SEL)rightSelector;
+- (void)setBarButtonItemWithLeftButton:(UIButton *)leftButton
+                           rightButton:(UIButton *)rightButton;;
 
 /**
- * デフォルトのナビゲーションアイテムをデザイン
- * @param leftTarget leftTarget
- * @param leftSelector leftSelector
- * @param rightTarget rightTarget
- * @param rightSeclector rightSeclector
- */
-/*
-- (void)designWantedlyDefaultNavigationItemWithLeftTarget:(id)leftTarget
-                                             leftSelector:(SEL)leftSelector
-                                              rightTarget:(id)rightTarget
-                                            rightSelector:(SEL)rightSelector;
-*/
-/**
- * 2階層目のナビゲーションアイテムをデザイン
- * @param leftTarget leftTarget
- * @param leftSelector leftSelector
- * @param rightTarget rightTarget
- * @param rightSeclector rightSeclector
- */
-/*
-- (void)designWantedlyPushedNavigationItemWithLeftTarget:(id)leftTarget
-                                            leftSelector:(SEL)leftSelector
-                                             rightTarget:(id)rightTarget
-                                           rightSelector:(SEL)rightSelector;
-*/
-/**
- * ナビゲーションアイテムをリセット
+ * NavigationItemをリセット
  */
 - (void)resetBarButtonItems;
 

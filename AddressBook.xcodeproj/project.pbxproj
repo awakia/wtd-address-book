@@ -15,9 +15,12 @@
 		E61ACB12175AF812007A5BAE /* common_btn_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB0E175AF812007A5BAE /* common_btn_cancel.png */; };
 		E61ACB14175AF927007A5BAE /* common_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB13175AF927007A5BAE /* common_clear.png */; };
 		E61ACB1A175B0363007A5BAE /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB18175B0363007A5BAE /* PopupView.m */; };
-		E61ACB20175B0511007A5BAE /* MessageAddressPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB1E175B0511007A5BAE /* MessageAddressPopupView.m */; };
-		E61ACB27175B055F007A5BAE /* MessageAddressPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61ACB26175B055F007A5BAE /* MessageAddressPopupView.xib */; };
 		E61ACB2B175B253A007A5BAE /* UITableView+Touchable.m in Sources */ = {isa = PBXBuildFile; fileRef = E61ACB2A175B253A007A5BAE /* UITableView+Touchable.m */; };
+		E655914F17636E89000C21AC /* FUIButton+Highlighted.m in Sources */ = {isa = PBXBuildFile; fileRef = E655914D17636E89000C21AC /* FUIButton+Highlighted.m */; };
+		E65591651763923F000C21AC /* MessageAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E65591601763923F000C21AC /* MessageAddressCell.m */; };
+		E65591661763923F000C21AC /* MessageAddressPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = E65591621763923F000C21AC /* MessageAddressPopupView.m */; };
+		E655916A17639249000C21AC /* MessageAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E655916817639249000C21AC /* MessageAddressCell.xib */; };
+		E655916B17639249000C21AC /* MessageAddressPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E655916917639249000C21AC /* MessageAddressPopupView.xib */; };
 		E690AEAD17377766005D20B8 /* FriendListViewControllerFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */; };
 		E690AEB1173778E1005D20B8 /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E690AEB0173778E1005D20B8 /* FriendListCell.xib */; };
 		E690AEB917377906005D20B8 /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E690AEB617377906005D20B8 /* FriendListCell.m */; };
@@ -94,11 +97,16 @@
 		E61ACB13175AF927007A5BAE /* common_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_clear.png; sourceTree = "<group>"; };
 		E61ACB17175B0363007A5BAE /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
 		E61ACB18175B0363007A5BAE /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
-		E61ACB1D175B0511007A5BAE /* MessageAddressPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAddressPopupView.h; sourceTree = "<group>"; };
-		E61ACB1E175B0511007A5BAE /* MessageAddressPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAddressPopupView.m; sourceTree = "<group>"; };
-		E61ACB26175B055F007A5BAE /* MessageAddressPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageAddressPopupView.xib; sourceTree = "<group>"; };
 		E61ACB29175B253A007A5BAE /* UITableView+Touchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Touchable.h"; sourceTree = "<group>"; };
 		E61ACB2A175B253A007A5BAE /* UITableView+Touchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Touchable.m"; sourceTree = "<group>"; };
+		E655914C17636E89000C21AC /* FUIButton+Highlighted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FUIButton+Highlighted.h"; sourceTree = "<group>"; };
+		E655914D17636E89000C21AC /* FUIButton+Highlighted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FUIButton+Highlighted.m"; sourceTree = "<group>"; };
+		E655915F1763923F000C21AC /* MessageAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAddressCell.h; sourceTree = "<group>"; };
+		E65591601763923F000C21AC /* MessageAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAddressCell.m; sourceTree = "<group>"; };
+		E65591611763923F000C21AC /* MessageAddressPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAddressPopupView.h; sourceTree = "<group>"; };
+		E65591621763923F000C21AC /* MessageAddressPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAddressPopupView.m; sourceTree = "<group>"; };
+		E655916817639249000C21AC /* MessageAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageAddressCell.xib; sourceTree = "<group>"; };
+		E655916917639249000C21AC /* MessageAddressPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageAddressPopupView.xib; sourceTree = "<group>"; };
 		E690AEAB17377766005D20B8 /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
 		E690AEAC17377766005D20B8 /* FriendListViewControllerFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewControllerFriendListViewController.m; sourceTree = "<group>"; };
 		E690AEB0173778E1005D20B8 /* FriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
@@ -214,7 +222,7 @@
 		E61ACB03175AEFF5007A5BAE /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				E61ACB1B175B0511007A5BAE /* View */,
+				E655915C1763923F000C21AC /* MessageAddressPopupView */,
 				E61ACB06175AEFF5007A5BAE /* MessageViewController.h */,
 				E61ACB07175AEFF5007A5BAE /* MessageViewController.m */,
 			);
@@ -230,29 +238,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		E61ACB1B175B0511007A5BAE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E61ACB1D175B0511007A5BAE /* MessageAddressPopupView.h */,
-				E61ACB1E175B0511007A5BAE /* MessageAddressPopupView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		E61ACB24175B055F007A5BAE /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				E61ACB25175B055F007A5BAE /* View */,
+				E655916717639249000C21AC /* MessageAddressPopupView */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		E61ACB25175B055F007A5BAE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E61ACB26175B055F007A5BAE /* MessageAddressPopupView.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E61ACB28175B253A007A5BAE /* View */ = {
@@ -262,6 +253,35 @@
 				E61ACB2A175B253A007A5BAE /* UITableView+Touchable.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E655914A17636E89000C21AC /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E655914C17636E89000C21AC /* FUIButton+Highlighted.h */,
+				E655914D17636E89000C21AC /* FUIButton+Highlighted.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		E655915C1763923F000C21AC /* MessageAddressPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				E655915F1763923F000C21AC /* MessageAddressCell.h */,
+				E65591601763923F000C21AC /* MessageAddressCell.m */,
+				E65591611763923F000C21AC /* MessageAddressPopupView.h */,
+				E65591621763923F000C21AC /* MessageAddressPopupView.m */,
+			);
+			path = MessageAddressPopupView;
+			sourceTree = "<group>";
+		};
+		E655916717639249000C21AC /* MessageAddressPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				E655916917639249000C21AC /* MessageAddressPopupView.xib */,
+				E655916817639249000C21AC /* MessageAddressCell.xib */,
+			);
+			path = MessageAddressPopupView;
 			sourceTree = "<group>";
 		};
 		E690AEAE173778E1005D20B8 /* RootView */ = {
@@ -501,6 +521,7 @@
 		E6D0DDE01736993400F3E399 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E655914A17636E89000C21AC /* Button */,
 				E61ACB15175B0363007A5BAE /* View */,
 				E6D0DDE11736993400F3E399 /* ViewController */,
 			);
@@ -722,8 +743,9 @@
 				E61ACB11175AF812007A5BAE /* common_btn_cancel_pressed.png in Resources */,
 				E61ACB12175AF812007A5BAE /* common_btn_cancel.png in Resources */,
 				E61ACB14175AF927007A5BAE /* common_clear.png in Resources */,
-				E61ACB27175B055F007A5BAE /* MessageAddressPopupView.xib in Resources */,
 				E6E3C88F175D005D009915AB /* common_button_arrow.png in Resources */,
+				E655916A17639249000C21AC /* MessageAddressCell.xib in Resources */,
+				E655916B17639249000C21AC /* MessageAddressPopupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,8 +827,10 @@
 				E690AEB917377906005D20B8 /* FriendListCell.m in Sources */,
 				E61ACB0A175AEFF5007A5BAE /* MessageViewController.m in Sources */,
 				E61ACB1A175B0363007A5BAE /* PopupView.m in Sources */,
-				E61ACB20175B0511007A5BAE /* MessageAddressPopupView.m in Sources */,
 				E61ACB2B175B253A007A5BAE /* UITableView+Touchable.m in Sources */,
+				E655914F17636E89000C21AC /* FUIButton+Highlighted.m in Sources */,
+				E65591651763923F000C21AC /* MessageAddressCell.m in Sources */,
+				E65591661763923F000C21AC /* MessageAddressPopupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

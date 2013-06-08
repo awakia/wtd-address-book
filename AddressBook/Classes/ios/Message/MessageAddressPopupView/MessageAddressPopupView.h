@@ -3,6 +3,7 @@
 
 
 #import "PopupView.h"
+#import "DragAndDropTableView.h"
 
 
 #pragma mark - class
@@ -11,7 +12,7 @@
 
 #pragma mark - MessageAddressPopupView
 /// to,cc,bccアドレス追加用のポップアップUI
-@interface MessageAddressPopupView : PopupView {
+@interface MessageAddressPopupView : PopupView <UITableViewDelegate, UITableViewDataSource, DragAndDropTableViewDelegate, DragAndDropTableViewDataSource> {
 }
 
 
@@ -28,6 +29,19 @@
 @property (weak, nonatomic) IBOutlet UIView *ccView;
 /// BCC:View
 @property (weak, nonatomic) IBOutlet UIView *bccView;
+/// TO:のリストテーブル
+@property (weak, nonatomic) IBOutlet DragAndDropTableView *toTableView;
+/// CC:のリストテーブル
+@property (weak, nonatomic) IBOutlet DragAndDropTableView *ccTableView;
+/// BCC:のリストテーブル
+@property (weak, nonatomic) IBOutlet DragAndDropTableView *bccTableView;
+
+/// TO:一覧リスト
+@property (strong) NSArray *toList;
+/// CC:一覧リスト
+@property (strong) NSArray *ccList;
+/// BCC:一覧リスト
+@property (strong) NSArray *bccList;
 
 
 #pragma mark - event listener

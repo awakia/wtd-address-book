@@ -3,10 +3,11 @@
 
 
 #import "MessageAddressPopupView.h"
-// UI
-#import "FUIButton.h"
 #import <QuartzCore/QuartzCore.h>
+// UI
+#import "MessageAddressCell.h"
 // Extension
+#import "FUIButton+Highlighted.h"
 #import "UIColor+FlatUI.h"
 
 
@@ -21,6 +22,110 @@
 @synthesize toView;
 @synthesize ccView;
 @synthesize bccView;
+@synthesize toTableView;
+@synthesize ccTableView;
+@synthesize bccTableView;
+
+@synthesize toList;
+@synthesize ccList;
+@synthesize bccList;
+
+
+#pragma mark - initializer
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.toList = @[
+            @"リュウ", @"ケン", @"エドモンド本田", @"春麗", @"ブランカ", @"ザンギエフ", @"ガイル", @"ダルシム", @"バイソン", @"バルログ", @"サガット", @"ベガ",
+        ];
+        self.ccList = @[
+            @"アムロ", @"シャア", @"ララァ", @"ブライト", @"セイラ", @"ハヤト", @"カイ", @"ドズル", @"ギレン", @"キシリア", @"ガルマ",
+        ];
+        self.bccList = @[
+            @"フシギダネ", @"フシギソウ", @"フシギバナ", @"ヒトカゲ", @"リザード", @"リザードン", @"ゼニガメ", @"カメール", @"カメックス",
+        ];
+    }
+    return self;
+}
+
+- (id)awakeAfterUsingCoder:(NSCoder *)aDecoder
+{
+   if (self) {
+   }
+   return self;
+}
+
+
+#pragma mark - UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    NSInteger count = 0;
+    if (tableView == self.toTableView) {
+        count = [self.toList count];
+    }
+    if (tableView == self.ccTableView) {
+        count = [self.ccList count];
+    }
+    if (tableView == self.bccTableView) {
+        count = [self.bccList count];
+    }
+    return count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kMessageAddressCellHeight;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *className = NSStringFromClass([MessageAddressCell class]);
+    MessageAddressCell *cell = [tableView dequeueReusableCellWithIdentifier:className];
+    if (cell == nil) {
+        UINib *nib = [UINib nibWithNibName:className bundle:nil];
+        cell = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
+    }
+    if (tableView == self.toTableView) {
+        [cell.nameLabel setText:self.toList[indexPath.row]];
+    }
+    if (tableView == self.ccTableView) {
+        [cell.nameLabel setText:self.ccList[indexPath.row]];
+    }
+    if (tableView == self.bccTableView) {
+        [cell.nameLabel setText:self.bccList[indexPath.row]];
+    }
+
+    return cell;
+}
+
+#pragma mark - DragAndDropTableViewDelegate
+/*
+-(void)tableView:(DragAndDropTableView *)tableView
+willBeginDraggingCellAtIndexPath:(NSIndexPath *)indexPath
+placeholderImageView:(UIImageView *)placeHolderImageView
+{
+}
+
+-(void)tableView:(DragAndDropTableView *)tableView
+didEndDraggingCellToIndexPath:(NSIndexPath *)indexPath
+ placeHolderView:(UIImageView *)placeholderImageView
+{
+}
+
+-(CGFloat)tableView:(DragAndDropTableView *)tableView
+heightForEmptySection:(int)section
+{
+}
+*/
 
 
 #pragma mark - event listener
@@ -44,7 +149,7 @@
 #pragma mark - api
 - (void)appearInView:(UIView *)parentView
 {
-    [self design];
+    [self designWithButton:self.toButton];
 
     // 表示
     [super appearInView:parentView];
@@ -73,39 +178,18 @@
 
 #pragma mark - private api
 /**
- * 見た目を調整
- */
-- (void)design
-{
-    // to:
-    self.toButton.buttonColor = [UIColor alizarinColor];
-    self.toButton.shadowColor = [UIColor pomegranateColor];
-    self.toButton.shadowHeight = 6.0f;
-    // cc:
-    self.ccButton.buttonColor = [UIColor carrotColor];
-    self.ccButton.shadowColor = [UIColor pumpkinColor];
-    self.ccButton.shadowHeight = 6.0f;
-    // bcc:
-    self.bccButton.buttonColor = [UIColor sunflowerColor];
-    self.bccButton.shadowColor = [UIColor tangerineColor];
-    self.bccButton.shadowHeight = 6.0f;
-
-    [self designWithButton:self.toButton];
-}
-
-/**
  * to:,cc:,bcc:の見た目を調整
- * @param 押下されたボタン
+ * @param selectedButton 押下されたボタン
  */
 - (void)designWithButton:(FUIButton *)selectedButton
 {
     [self designViewWidthWithButton:selectedButton];
-    [self designViewBorderWithButton:selectedButton];
+    [self designButtonColorWithButton:selectedButton];
 }
 
 /**
  * to:,cc:,bcc:の幅を調整
- * @param 押下されたボタン
+ * @param selectedButton 押下されたボタン
  */
 - (void)designViewWidthWithButton:(FUIButton *)selectedButton
 {
@@ -147,31 +231,22 @@
 }
 
 /**
- * to:,cc:,bccの枠を調整
- * @param 押下されたボタン
+ * to:,cc:,bccのボタンの色を調整
+ * @param selectedButton
  */
-- (void)designViewBorderWithButton:(FUIButton *)selectedButton
+- (void)designButtonColorWithButton:(FUIButton *)selectedButton
 {
-/*
     NSArray *buttons = @[self.toButton, self.ccButton, self.bccButton];
     for (FUIButton *button in buttons) {
-        [button.layer setBorderColor:[[UIColor clearColor] CGColor]];
-        [button.layer setBorderWidth:1.0f];
+        if (button == selectedButton) {
+            [button setButtonColor:[UIColor peterRiverColor]];
+            [button setHighlightedColor:[UIColor peterRiverColor]];
+        }
+        else {
+            [button setButtonColor:[UIColor wetAsphaltColor]];
+            [button setHighlightedColor:[UIColor peterRiverColor]];
+        }
     }
-
-    if (self.toButton == selectedButton) {
-        [self.toView.layer setBorderColor:[[UIColor pomegranateColor] CGColor]];
-        [self.toView.layer setBorderWidth:1.0f];
-    }
-    if (self.ccButton == selectedButton) {
-        [self.ccView.layer setBorderColor:[[UIColor pumpkinColor] CGColor]];
-        [self.ccView.layer setBorderWidth:1.0f];
-    }
-    if (self.bccButton == selectedButton) {
-        [self.bccView.layer setBorderColor:[[UIColor tangerineColor] CGColor]];
-        [self.bccView.layer setBorderWidth:1.0f];
-    }
-*/
 }
 
 
