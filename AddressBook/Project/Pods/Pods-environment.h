@@ -24,3 +24,9 @@
 #define COCOAPODS_VERSION_MINOR_JSMessagesViewController 1
 #define COCOAPODS_VERSION_PATCH_JSMessagesViewController 0
 
+// MFFadeBackModalAnimation
+#define COCOAPODS_POD_AVAILABLE_MFFadeBackModalAnimation
+#define COCOAPODS_VERSION_MAJOR_MFFadeBackModalAnimation 0
+#define COCOAPODS_VERSION_MINOR_MFFadeBackModalAnimation 0
+#define COCOAPODS_VERSION_PATCH_MFFadeBackModalAnimation 1
+

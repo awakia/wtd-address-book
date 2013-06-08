@@ -149,6 +149,7 @@ heightForEmptySection:(int)section
 #pragma mark - api
 - (void)appearInView:(UIView *)parentView
 {
+    // to:,cc:,bccのデザイン
     [self designWithButton:self.toButton];
 
     // 表示
@@ -198,7 +199,7 @@ heightForEmptySection:(int)section
 
     // ボタンの大きさ、どのボタンが選択されているか計算
     NSInteger selectedIndex = 0;
-    CGFloat minWidth = selectedButton.frame.size.width;
+    CGFloat minWidth = self.toView.frame.size.width;
     for (NSInteger index = 0; index < [buttons count]; index++) {
         FUIButton *button = buttons[index];
         if (button.frame.size.width < minWidth) { minWidth = ((UIView *)views[index]).frame.size.width; }
@@ -238,11 +239,14 @@ heightForEmptySection:(int)section
 {
     NSArray *buttons = @[self.toButton, self.ccButton, self.bccButton];
     for (FUIButton *button in buttons) {
+        [button setShadowHeight:4.0f];
         if (button == selectedButton) {
+            [button setShadowColor:[UIColor belizeHoleColor]];
             [button setButtonColor:[UIColor peterRiverColor]];
             [button setHighlightedColor:[UIColor peterRiverColor]];
         }
         else {
+            [button setShadowColor:[UIColor midnightBlueColor]];
             [button setButtonColor:[UIColor wetAsphaltColor]];
             [button setHighlightedColor:[UIColor peterRiverColor]];
         }

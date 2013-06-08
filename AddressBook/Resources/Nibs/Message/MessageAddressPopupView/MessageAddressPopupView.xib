@@ -113,6 +113,10 @@
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<bool key="IBUIAlwaysBounceVertical">YES</bool>
 										<int key="IBUISeparatorStyle">1</int>
+										<object class="NSColor" key="IBUISeparatorColor" id="579137049">
+											<int key="NSColorSpace">3</int>
+											<bytes key="NSWhite">MAA</bytes>
+										</object>
 										<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 										<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
 										<float key="IBUIRowHeight">44</float>
@@ -168,6 +172,7 @@
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<bool key="IBUIAlwaysBounceVertical">YES</bool>
 										<int key="IBUISeparatorStyle">1</int>
+										<reference key="IBUISeparatorColor" ref="579137049"/>
 										<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 										<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
 										<float key="IBUIRowHeight">44</float>
@@ -216,12 +221,14 @@
 										<string key="NSFrame">{{0, 48}, {64, 208}}</string>
 										<reference key="NSSuperview" ref="542811879"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<reference key="IBUIBackgroundColor" ref="584877180"/>
 										<bool key="IBUIClipsSubviews">YES</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 										<bool key="IBUIAlwaysBounceVertical">YES</bool>
 										<int key="IBUISeparatorStyle">1</int>
+										<reference key="IBUISeparatorColor" ref="579137049"/>
 										<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 										<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
 										<float key="IBUIRowHeight">44</float>
@@ -243,7 +250,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="87942006"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="350081660"/>
+						<reference key="IBUIBackgroundColor" ref="579137049"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
@@ -553,7 +560,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">86</int>
+			<int key="maxID">90</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

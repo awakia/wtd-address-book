@@ -9,6 +9,7 @@
 // UIKit
 #import "FUIButton+Highlighted.h"
 // UIKit-Extension
+#import "UIViewController+MFFadeBackModalAnimation.h"
 #import "UIColor+FlatUI.h"
 #import "UINavigationBar+FlatUI.h"
 #import "UINavigationBar+Custom.h"
@@ -21,6 +22,8 @@
 
 
 #pragma mark - synthesize
+@synthesize rightButton;
+
 @synthesize messages;
 @synthesize timestamps;
 
@@ -51,21 +54,22 @@
 
     // ナビゲーションバー
     {   // ボタン設定
-    FUIButton *rightButton = [FUIButton buttonWithType:UIButtonTypeCustom];
-    UIImage *rightButtonImage = [UIImage imageNamed:kImageArrowButton];
+    FUIButton *button = [FUIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *buttonImage = [UIImage imageNamed:kImageArrowButton];
     const CGFloat offset = 6;
-    [rightButton setButtonColor:[UIColor alizarinColor]];
-    [rightButton setHighlightedColor:[UIColor pomegranateColor]];
-    [rightButton setImage:rightButtonImage forState:UIControlStateNormal];
-    [rightButton setFrame:CGRectMake(0, 0, rightButtonImage.size.width/2+offset*2, rightButtonImage.size.height/2+offset*2)];
-    [rightButton setImageEdgeInsets:UIEdgeInsetsMake(offset, offset, offset, offset)];
-    [rightButton setCornerRadius:4];
-    [rightButton setClipsToBounds:YES];
-    [rightButton addTarget:self
-                    action:@selector(touchedUpInsideWithRightButton:)
-          forControlEvents:UIControlEventTouchUpInside];
+    [button setButtonColor:[UIColor alizarinColor]];
+    [button setHighlightedColor:[UIColor pomegranateColor]];
+    [button setImage:buttonImage forState:UIControlStateNormal];
+    [button setFrame:CGRectMake(0, 0, buttonImage.size.width/2+offset*2, buttonImage.size.height/2+offset*2)];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(offset, offset, offset, offset)];
+    [button setCornerRadius:4];
+    [button setClipsToBounds:YES];
+    [button addTarget:self
+               action:@selector(touchedUpInsideWithRightButton:)
+     forControlEvents:UIControlEventTouchUpInside];
     [self.navigationItem setBarButtonItemWithLeftButton:nil
-                                            rightButton:rightButton];
+                                            rightButton:button];
+    self.rightButton = button;
     }
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor cloudsColor]];
     [self.navigationController.navigationBar setNavigationBarShadow];
@@ -155,6 +159,10 @@
  */
 - (void)disappearWithPopupView:(PopupView *)popupView
 {
+    [self.navigationItem setBarButtonItemWithLeftButton:nil
+                                            rightButton:self.rightButton];
+    self.rightButton.transform = CGAffineTransformMakeRotation(0);
+
     self.addressPopupView = nil;
 }
 
@@ -162,8 +170,8 @@
 #pragma mark - event listener
 - (IBAction)touchedUpInsideWithLeftButton:(UIButton *)button
 {
-    [self textViewDidEndEditing:self.inputView.textView];
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self textViewDidEndEditing:self.inputView.textView];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)touchedUpInsideWithRightButton:(UIButton *)button
@@ -184,6 +192,25 @@
 
         [self textViewDidEndEditing:self.inputView.textView];
         button.transform = CGAffineTransformMakeRotation(M_PI+0.00001f);
+
+        // ナビゲーションバー
+        {   // ボタン設定
+        FUIButton *button = [FUIButton buttonWithType:UIButtonTypeCustom];
+        UIImage *buttonImage = [UIImage imageNamed:kImageArrowButton];
+        const CGFloat offset = 6;
+        [button setButtonColor:[UIColor carrotColor]];
+        [button setHighlightedColor:[UIColor pumpkinColor]];
+        [button setImage:buttonImage forState:UIControlStateNormal];
+        [button setFrame:CGRectMake(0, 0, buttonImage.size.width/2+offset*2, buttonImage.size.height/2+offset*2)];
+        [button setImageEdgeInsets:UIEdgeInsetsMake(offset, offset, offset, offset)];
+        [button setCornerRadius:4];
+        [button setClipsToBounds:YES];
+        [button addTarget:self
+                   action:@selector(touchedUpInsideWithLeftButton:)
+              forControlEvents:UIControlEventTouchUpInside];
+        [self.navigationItem setBarButtonItemWithLeftButton:button
+                                                rightButton:self.rightButton];
+        }
     }
 }
 

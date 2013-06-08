@@ -8,6 +8,7 @@
 
 #pragma mark - class
 @class MessageAddressPopupView;
+@class FUIButton;
 
 
 #pragma mark - interface
@@ -17,6 +18,9 @@
 
 
 #pragma mark - property
+/// ナビゲーションバー右上ボタン
+@property (nonatomic, weak) FUIButton *rightButton;
+
 /// メッセージ一覧
 @property (strong) NSMutableArray *messages;
 /// メッセージ投稿時間一覧
