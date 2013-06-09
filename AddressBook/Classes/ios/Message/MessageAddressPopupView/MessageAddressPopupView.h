@@ -37,11 +37,11 @@
 @property (weak, nonatomic) IBOutlet DragAndDropTableView *bccTableView;
 
 /// TO:一覧リスト
-@property (strong) NSArray *toList;
+@property (strong) NSMutableArray *toList;
 /// CC:一覧リスト
-@property (strong) NSArray *ccList;
+@property (strong) NSMutableArray *ccList;
 /// BCC:一覧リスト
-@property (strong) NSArray *bccList;
+@property (strong) NSMutableArray *bccList;
 
 
 #pragma mark - event listener

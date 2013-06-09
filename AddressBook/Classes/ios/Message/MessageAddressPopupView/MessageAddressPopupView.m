@@ -36,15 +36,15 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.toList = @[
+        self.toList = [NSMutableArray arrayWithArray:@[
             @"リュウ", @"ケン", @"エドモンド本田", @"春麗", @"ブランカ", @"ザンギエフ", @"ガイル", @"ダルシム", @"バイソン", @"バルログ", @"サガット", @"ベガ",
-        ];
-        self.ccList = @[
+        ]];
+        self.ccList = [NSMutableArray arrayWithArray:@[
             @"アムロ", @"シャア", @"ララァ", @"ブライト", @"セイラ", @"ハヤト", @"カイ", @"ドズル", @"ギレン", @"キシリア", @"ガルマ",
-        ];
-        self.bccList = @[
+        ]];
+        self.bccList = [NSMutableArray arrayWithArray:@[
             @"フシギダネ", @"フシギソウ", @"フシギバナ", @"ヒトカゲ", @"リザード", @"リザードン", @"ゼニガメ", @"カメール", @"カメックス",
-        ];
+        ]];
     }
     return self;
 }
@@ -79,6 +79,67 @@
     return count;
 }
 
+-(BOOL)tableView:(UITableView *)tableView
+canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView
+moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+     toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    NSArray *dataSources = @[ self.toList, self.ccList, self.bccList, ];
+    NSArray *tableViews = @[ self.toTableView, self.ccTableView, self.bccTableView, ];
+    NSInteger index = 0;
+    for (NSInteger i = 0; i < [tableViews count]; i++) {
+        if (tableView == tableViews[i]) {
+            index = i;
+        }
+    }
+
+    NSObject *o = dataSources[index][sourceIndexPath.row];
+    [dataSources[index] removeObjectAtIndex:sourceIndexPath.row];
+    [dataSources[index] insertObject:o
+                             atIndex:destinationIndexPath.row];
+}
+
+-(void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *dataSources = @[ self.toList, self.ccList, self.bccList, ];
+    NSArray *tableViews = @[ self.toTableView, self.ccTableView, self.bccTableView, ];
+    NSInteger index = 0;
+    for (NSInteger i = 0; i < [tableViews count]; i++) {
+        if (tableView == tableViews[i]) {
+            index = i;
+        }
+    }
+
+    if (UITableViewCellEditingStyleInsert == editingStyle) {
+        [tableViews[index] beginUpdates];
+        [dataSources[index] addObject:[NSMutableArray array]];
+        [tableViews[index] insertSections:[NSIndexSet indexSetWithIndex:[dataSources[index] count]-1]
+                         withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableViews[index] endUpdates];
+    }
+    else if (UITableViewCellEditingStyleDelete == editingStyle) {
+        [tableViews[index] beginUpdates];
+        if ([[dataSources[index] objectAtIndex:indexPath.section] count] == 0) {
+            [tableViews[index] deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section]
+                             withRowAnimation:UITableViewRowAnimationAutomatic];
+            [dataSources[index] removeObjectAtIndex:indexPath.section];
+        }
+        else {
+            [tableViews[index] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                                     withRowAnimation:UITableViewRowAnimationAutomatic];
+            [dataSources[index] removeObjectAtIndex:indexPath.row];
+        }
+        [tableViews[index] endUpdates];
+    }
+}
+
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -107,25 +168,53 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     return cell;
 }
 
+
+#pragma mark DragAndDropTableViewDataSource
+-(BOOL)canCreateNewSection:(NSInteger)section
+{
+    return YES;
+}
+
+
 #pragma mark - DragAndDropTableViewDelegate
-/*
 -(void)tableView:(DragAndDropTableView *)tableView
 willBeginDraggingCellAtIndexPath:(NSIndexPath *)indexPath
 placeholderImageView:(UIImageView *)placeHolderImageView
 {
+    placeHolderImageView.layer.shadowOpacity = 0.3f;
+    placeHolderImageView.layer.shadowRadius = 1.0f;
 }
 
 -(void)tableView:(DragAndDropTableView *)tableView
 didEndDraggingCellToIndexPath:(NSIndexPath *)indexPath
  placeHolderView:(UIImageView *)placeholderImageView
 {
+    NSArray *dataSources = @[ self.toList, self.ccList, self.bccList, ];
+    NSArray *tableViews = @[ self.toTableView, self.ccTableView, self.bccTableView, ];
+
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+    for (int i = 0; i < [dataSources count]; i++) {
+        if ([dataSources[i] count] == 0) {
+            [indexSet addIndex:i];
+        }
+    }
+
+    for (NSInteger i = 0; i < [dataSources count]; i++) {
+        UITableView *tv = tableViews[i];
+        [tv beginUpdates];
+        if (tv == tableView) {
+            [tv deleteSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+            [dataSources[i] removeObjectsAtIndexes:indexSet];
+        }
+        [tv endUpdates];
+    }
 }
 
 -(CGFloat)tableView:(DragAndDropTableView *)tableView
 heightForEmptySection:(int)section
 {
+    return kMessageAddressCellHeight;
 }
-*/
 
 
 #pragma mark - event listener
